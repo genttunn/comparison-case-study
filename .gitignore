@@ -1,0 +1,31 @@
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Flask / SQLite databases (generated at runtime from seed.sql)
+spa/backend/app.db
+hda/backend/app.db
+
+# Vue / Node
+spa/frontend/node_modules/
+spa/frontend/dist/
+spa/frontend/.vite/
+
+# Environment
+.env
+.env.local
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
