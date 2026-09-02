@@ -12,6 +12,9 @@ venv/
 spa/backend/app.db
 hda/backend/app.db
 
+# Flask-Session filesystem store (runtime, not committed)
+hda/backend/flask_session/
+
 # Vue / Node
 spa/frontend/node_modules/
 spa/frontend/dist/

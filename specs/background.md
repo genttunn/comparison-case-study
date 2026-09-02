@@ -84,6 +84,7 @@ Any deviation from this table in an implementation must be flagged in that spec'
 /hda/frontend/... (static assets only)
 /specs/spec_NN_*.md (all specs must use `spec-template.md` as base)
 /logs/ (prompt logs, one file per spec, verbatim from agent interaction)
+/plans/ (agent plans, per spec)
 /decision_log.md
 
 ## 7. Conventions

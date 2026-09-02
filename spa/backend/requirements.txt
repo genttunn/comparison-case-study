@@ -1,0 +1,5 @@
+apiflask
+PyJWT
+werkzeug
+flask-cors
+python-dotenv

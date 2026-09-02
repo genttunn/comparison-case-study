@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDA Task Tracker</title>
+  <link rel="stylesheet" href="/shared/styles.css" />
+  <script src="/static/htmx.min.js"></script>
+  <script>
+    // Restore theme before first paint
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <span class="topbar-title">Task Tracker &mdash; <span>HDA</span></span>
+    <div class="topbar-actions">
+      <span style="font-size:12px; color:var(--text-muted)">{{ username }}</span>
+      <form method="POST" action="/logout" style="margin:0">
+        <button type="submit" class="btn-secondary">Logout</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-label">Security Issues</div>
+      <a class="nav-link {% if active == 'issue-1' %}active{% endif %}" href="/issue-1-xss">1. XSS</a>
+      <a class="nav-link {% if active == 'issue-2' %}active{% endif %}" href="/issue-2-client-storage">2. Client Storage</a>
+      <a class="nav-link {% if active == 'issue-3' %}active{% endif %}" href="/issue-3-third-party">3. Third-Party Deps</a>
+      <a class="nav-link {% if active == 'issue-4' %}active{% endif %}" href="/issue-4-monitoring">4. Monitoring &amp; Detection</a>
+      <a class="nav-link {% if active == 'issue-5' %}active{% endif %}" href="/issue-5-business-logic">5. Business Logic Exposure</a>
+    </nav>
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-label"></span>
+  </button>
+  <script>
+    (function () {
+      var label = document.getElementById('theme-label');
+      label.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀ Light' : '☾ Dark';
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      document.getElementById('theme-label').textContent = isDark ? '☾ Dark' : '☀ Light';
+    }
+  </script>
+</body>
+</html>
