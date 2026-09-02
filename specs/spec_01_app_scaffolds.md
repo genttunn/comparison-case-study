@@ -75,4 +75,4 @@ N/A
 Verbatim prompt(s) sent to the model (this section filled after — or copy the spec itself as the prompt, noting so).
 
 ## 9. Deviations / Corrections
-Author adjusted the implementation plan to add a Dark/Light mode button to the bottom right of the apps.
+Author adjusted the implementation plan to add a Dark/Light mode button to the bottom right of the apps. Added a README after scaffolding as well.

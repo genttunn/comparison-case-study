@@ -51,3 +51,9 @@ To run:
 - SPA backend: cd spa/backend && python app.py
 - SPA frontend: cd spa/frontend && npm run dev
 - HDA: cd hda/backend && python app.py then open http://localhost:5002
+
+User:
+Write for me a README.md file with short introduction, file structure, and commands to get the applications running.
+
+Claude:
+Done. The README covers the research purpose, a table of the 5 issues, architecture summary, full file tree, and per-app run commands with the demo credentials at the bottom.
