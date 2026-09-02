@@ -50,7 +50,7 @@ In the `/shared` folder lives common assets used by both the SPA and the HDA app
 
 #### 4.3.1 Data model & seeding
 
-Data definition will be written once in `shared/seed.sql` and shared. Both `spa/backend/app.db` and `hda/backend/app.db` are created fresh from this  file with same tables, same seed rows, and same IDs every time the app starts. Any schema change must go through `shared/seed.sql` and be reflected in both apps in the same commit.
+Data definition will be written once in `shared/seed.sql` and shared. Both `spa/backend/app.db` and `hda/backend/app.db` are created fresh from this file with same tables, same seed rows, and same IDs every time the app starts. The data will be persisted as an SQLite file for each app, located at `backend/app.db` in each approach. Any schema change must go through `shared/seed.sql` and be reflected in both apps in the same commit.
 
 - Data schema:
   - Table `users(id, username, password_hash, role, email, personal_token` :
