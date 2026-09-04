@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
@@ -41,6 +41,10 @@ const route  = useRoute()
 
 const isDark   = ref(false)
 const username = ref(localStorage.getItem('username') || '')
+
+watch(() => route.path, () => {
+  username.value = localStorage.getItem('username') || ''
+})
 
 const isLoginRoute = computed(() => route.path === '/login')
 

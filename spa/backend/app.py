@@ -60,7 +60,7 @@ def login():
 
     token = jwt.encode(
         {
-            "sub":      user["id"],
+            "sub":      str(user["id"]),
             "username": user["username"],
             "role":     user["role"],
             "exp":      datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=8),
@@ -70,6 +70,84 @@ def login():
     )
 
     return jsonify({"token": token, "username": user["username"], "role": user["role"]})
+
+
+def get_current_user():
+    auth = request.headers.get("Authorization", "")
+    if not auth.startswith("Bearer "):
+        return None
+    try:
+        payload = jwt.decode(auth[7:], JWT_SECRET, algorithms=["HS256"])
+        return payload
+    except jwt.PyJWTError:
+        return None
+
+
+@app.get("/api/tasks/<int:task_id>")
+def get_task(task_id):
+    db   = get_db()
+    task = db.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
+    if not task:
+        return jsonify({"error": "Not found"}), 404
+
+    comments = db.execute(
+        """SELECT c.id, c.body, c.created_at, u.username
+           FROM comments c JOIN users u ON c.user_id = u.id
+           WHERE c.task_id = ? ORDER BY c.created_at ASC""",
+        (task_id,),
+    ).fetchall()
+
+    user          = get_current_user()
+    current_user_id = int(user["sub"]) if user else None
+    secret_notes  = task["secret_notes"] if current_user_id == task["owner_id"] else None
+
+    return jsonify({
+        "id":           task["id"],
+        "title":        task["title"],
+        "description":  task["description"],
+        "status":       task["status"],
+        "priority":     task["priority"],
+        "secret_notes": secret_notes,
+        "comments": [
+            {"id": c["id"], "body": c["body"], "username": c["username"], "created_at": c["created_at"]}
+            for c in comments
+        ],
+    })
+
+
+@app.post("/api/comments")
+def post_comment():
+    user = get_current_user()
+    if not user:
+        return jsonify({"error": "Unauthorized"}), 401
+
+    data    = request.get_json(force=True) or {}
+    task_id = data.get("task_id")
+    body    = data.get("body", "").strip()
+    if not task_id or not body:
+        return jsonify({"error": "task_id and body required"}), 400
+
+    db = get_db()
+    # VULN: xss — body stored raw, no sanitization
+    cur = db.execute(
+        "INSERT INTO comments (task_id, user_id, body) VALUES (?, ?, ?)",
+        (task_id, user["sub"], body),
+    )
+    db.commit()
+
+    new_comment = db.execute(
+        """SELECT c.id, c.body, c.created_at, u.username
+           FROM comments c JOIN users u ON c.user_id = u.id
+           WHERE c.id = ?""",
+        (cur.lastrowid,),
+    ).fetchone()
+
+    return jsonify({
+        "id":         new_comment["id"],
+        "body":       new_comment["body"],
+        "username":   new_comment["username"],
+        "created_at": new_comment["created_at"],
+    }), 201
 
 
 if __name__ == "__main__":

@@ -72,7 +72,7 @@ N/A
 - AC11: The login page's side panel (on both apps) lists every username and password from the seeded user table, and every single pair actually logs the user in successfully.
 
 ## 8. Prompt used
-Verbatim prompt(s) sent to the model (this section filled after — or copy the spec itself as the prompt, noting so).
+See `log_spec_01.md`
 
 ## 9. Deviations / Corrections
 Author adjusted the implementation plan to add a Dark/Light mode button to the bottom right of the apps. Added a README after scaffolding as well.

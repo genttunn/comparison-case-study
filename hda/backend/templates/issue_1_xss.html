@@ -2,5 +2,70 @@
 {% set active = "issue-1" %}
 {% block content %}
 <h2 class="page-title">Issue 1: XSS</h2>
-<p class="page-subtitle">Cross-Site Scripting — placeholder (spec_02)</p>
+<p class="page-subtitle">Stored Cross-Site Scripting via unsanitized comment rendering</p>
+
+{% if task %}
+<div class="card">
+  <h3 style="margin-bottom:10px">{{ task.title }}</h3>
+  <div style="display:flex;gap:12px;margin-bottom:12px;font-size:12px;color:var(--text-muted)">
+    <span>Status: <strong>{{ task.status }}</strong></span>
+    <span>Priority: <strong>{{ task.priority }}</strong></span>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <p style="font-size:13px">{{ task.description }}</p>
+  </div>
+  {% if show_secret_notes and task.secret_notes %}
+  <div class="form-group">
+    <label>Secret Notes (visible to task owner only)</label>
+    <p class="secret-notes-value" style="font-size:13px;color:var(--danger-text);font-style:italic">{{ task.secret_notes }}</p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h3 style="margin-bottom:14px">Comments</h3>
+  <ul id="comment-list" style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
+    {% for comment in comments %}
+    {% include "_comment.html" %}
+    {% endfor %}
+  </ul>
+
+  <form hx-post="/comments"
+        hx-target="#comment-list"
+        hx-swap="beforeend"
+        style="display:flex;flex-direction:column;gap:8px">
+    <input type="hidden" name="task_id" value="{{ task.id }}" />
+    <label for="body">Add a comment</label>
+    <textarea id="body" name="body" rows="3" placeholder="Write a comment..."></textarea>
+    <div>
+      <button type="submit">Post comment</button>
+    </div>
+  </form>
+</div>
+{% endif %}
+
+<div class="repro-block">
+  <h3>Reproduction steps</h3>
+  <ol style="padding-left:18px;line-height:2">
+    <li>Log in as <strong>levi</strong> (the attacker)</li>
+    <li>Paste the payload below into the comment box and submit</li>
+    <li>Log out, then log in as <strong>alice</strong> (the victim)</li>
+    <li>Navigate to this tab — notice the payload renders as escaped text, not as executing HTML</li>
+  </ol>
+  <div style="margin-top:12px">
+    <label>Payload</label>
+    <code style="display:block;margin-top:4px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:8px 10px;font-size:12px;word-break:break-all;white-space:pre-wrap">&lt;img src=x onerror="document.getElementById('attacker-panel').innerHTML='CAPTURED: ' + document.querySelector('.secret-notes-value').innerText"&gt;</code>
+  </div>
+  <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--repro-border)">
+    <strong>Why the HDA is structurally safe:</strong>
+    <p style="margin-top:6px;line-height:1.7">
+      Jinja2 auto-escapes all template variables by default. <code>{{ '{{ comment.body }}' }}</code> outputs
+      <code>&amp;lt;img src=x...&amp;gt;</code> — the browser renders it as visible text, never as HTML.
+      This is not an explicit sanitization call; it is how the template engine works. There is no way for
+      user-supplied content to reach the DOM as raw HTML unless the developer deliberately uses the
+      <code>| safe</code> filter, which this app does not.
+    </p>
+  </div>
+</div>
 {% endblock %}
