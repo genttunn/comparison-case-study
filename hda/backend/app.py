@@ -147,9 +147,49 @@ def post_comment():
     return render_template("_comment.html", comment=new_comment)
 
 
+@app.route("/comments-unsafe", methods=["POST"])
+def post_comment_unsafe():
+    if not session.get("user_id"):
+        return "", 401
+
+    task_id = request.form.get("task_id")
+    body    = request.form.get("body", "").strip()
+    if not task_id or not body:
+        return "", 400
+
+    db = get_db()
+    # VULN: xss — body stored raw, no sanitization
+    cur = db.execute(
+        "INSERT INTO comments (task_id, user_id, body) VALUES (?, ?, ?)",
+        (task_id, session["user_id"], body),
+    )
+    db.commit()
+
+    new_comment = db.execute(
+        """SELECT c.id, c.body, c.created_at, u.username
+           FROM comments c JOIN users u ON c.user_id = u.id
+           WHERE c.id = ?""",
+        (cur.lastrowid,),
+    ).fetchone()
+
+    return render_template("_comment_unsafe.html", comment=new_comment)
+
+
 @app.route("/issue-2-client-storage")
 def issue_2_client_storage():
-    return render_template("issue_2_client_storage.html", username=session.get("username"))
+    db       = get_db()
+    task     = db.execute("SELECT * FROM tasks WHERE id = 7").fetchone()
+    comments = db.execute(
+        """SELECT c.id, c.body, c.created_at, u.username
+           FROM comments c JOIN users u ON c.user_id = u.id
+           WHERE c.task_id = 7 ORDER BY c.created_at ASC""",
+    ).fetchall()
+    show_secret_notes = (session.get("user_id") == task["owner_id"])
+    return render_template("issue_2_client_storage.html",
+                           username=session.get("username"),
+                           task=task,
+                           comments=comments,
+                           show_secret_notes=show_secret_notes)
 
 
 @app.route("/issue-3-third-party")

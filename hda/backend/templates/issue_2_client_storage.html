@@ -2,5 +2,106 @@
 {% set active = "issue-2" %}
 {% block content %}
 <h2 class="page-title">Issue 2: Client-Side Storage</h2>
-<p class="page-subtitle">Sensitive data exposure via client-side storage — placeholder (spec_03)</p>
+<p class="page-subtitle">Sensitive data exposure via client-side storage</p>
+
+{% if task %}
+<div class="card">
+  <h3 style="margin-bottom:10px">{{ task.title }}</h3>
+  <div style="display:flex;gap:12px;margin-bottom:12px;font-size:12px;color:var(--text-muted)">
+    <span>Status: <strong>{{ task.status }}</strong></span>
+    <span>Priority: <strong>{{ task.priority }}</strong></span>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <p style="font-size:13px">{{ task.description }}</p>
+  </div>
+  {% if show_secret_notes and task.secret_notes %}
+  <div class="form-group">
+    <label>Secret Notes (visible to task owner only)</label>
+    <p class="secret-notes-value" style="font-size:13px;color:var(--danger-text);font-style:italic">{{ task.secret_notes }}</p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h3 style="margin-bottom:14px">Comments</h3>
+  <ul id="comment-list-2" style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
+    {% for comment in comments %}
+    <li style="border:1px solid var(--border);border-radius:4px;padding:10px 12px">
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px">
+        <strong>{{ comment.username }}</strong> &mdash; {{ comment.created_at }}
+      </div>
+      {# VULN: xss — | safe disables Jinja2 auto-escaping so the payload can fire and attempt document.cookie #}
+      <div>{{ comment.body | safe }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+  <form hx-post="/comments-unsafe"
+        hx-target="#comment-list-2"
+        hx-swap="beforeend"
+        style="display:flex;flex-direction:column;gap:8px">
+    <input type="hidden" name="task_id" value="{{ task.id }}" />
+    <label for="body2">Add a comment</label>
+    <textarea id="body2" name="body" rows="3" placeholder="Write a comment..."></textarea>
+    <div>
+      <button type="submit">Post comment</button>
+    </div>
+  </form>
+</div>
+{% endif %}
+
+<div id="attacker-panel-storage" class="attacker-panel">
+  <h3>Attacker Panel</h3>
+  <p style="font-size:13px;color:var(--text-muted)">Waiting for payload to fire...</p>
+</div>
+
+<div class="repro-block">
+  <h3 style="margin-bottom:6px">What levi could still do — session riding</h3>
+  <p style="line-height:1.7;font-size:13px">
+    Even though <code>document.cookie</code> is empty, an XSS payload could still make
+    credentialed <code>fetch()</code> calls from within alice's browser — the browser attaches
+    the session cookie automatically on every request. Levi could read alice's private data
+    or perform actions on her behalf while she is on the page.
+  </p>
+  <p style="margin-top:8px;line-height:1.7;font-size:13px">
+    However, levi <strong>cannot read the cookie value</strong>, cannot exfiltrate it, and
+    cannot use it from another machine. The moment alice closes the browser or the session
+    expires, levi retains nothing. This is session riding — a weaker, transient attack —
+    not credential theft.
+  </p>
+  <p style="margin-top:8px;line-height:1.7;font-size:13px;color:var(--danger-text)">
+    <strong>Note:</strong> This does not mean the HDA is safe from XSS. It means the attacker
+    walks away with no portable credential. Compare with the SPA, where the stolen JWT works
+    from any machine until it expires.
+  </p>
+</div>
+
+<div class="repro-block">
+  <h3>Reproduction steps</h3>
+  <ol style="padding-left:18px;line-height:2">
+    <li>Log in as <strong>levi</strong></li>
+    <li>Paste the payload below into the comment box and submit</li>
+    <li>Log out, then log in as <strong>alice</strong></li>
+    <li>Navigate to this tab — the attacker panel shows the <code>document.cookie</code> result: an empty string</li>
+    <li>There is nothing to steal. No replay is possible from another session.</li>
+  </ol>
+  <div style="margin-top:12px">
+    <label>Payload</label>
+    <code style="display:block;margin-top:4px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:8px 10px;font-size:12px;word-break:break-all;white-space:pre-wrap">&lt;img src=x onerror="setTimeout(function(){document.getElementById('attacker-panel-storage').innerHTML='&lt;strong&gt;document.cookie result:&lt;/strong&gt; &amp;quot;'+document.cookie+'&amp;quot;&lt;br&gt;&lt;em&gt;Nothing to steal.&lt;/em&gt;'},500)"&gt;</code>
+  </div>
+  <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--repro-border)">
+    <strong>Why the HDA is structurally safer:</strong>
+    <p style="margin-top:6px;line-height:1.7">
+      The HDA uses a server-side session. The browser holds only an opaque session ID in an
+      <code>HttpOnly</code> cookie — JavaScript cannot read it. No sensitive credential ever
+      lands in <code>localStorage</code> or anywhere JS can reach. This is the natural outcome
+      of server-side session philosophy, not a deliberate hardening step.
+    </p>
+    <p style="margin-top:8px;line-height:1.7">
+      The SPA could also use an <code>HttpOnly</code> cookie for its JWT — but someone has to
+      make that explicit decision. The default SPA pattern puts the token in
+      <code>localStorage</code> because it is simpler. The HDA has no such choice to make.
+    </p>
+  </div>
+</div>
 {% endblock %}

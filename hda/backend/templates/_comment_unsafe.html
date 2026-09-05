@@ -1,0 +1,7 @@
+<li style="border:1px solid var(--border);border-radius:4px;padding:10px 12px">
+  <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px">
+    <strong>{{ comment.username }}</strong> &mdash; {{ comment.created_at }}
+  </div>
+  {# VULN: xss — | safe used intentionally so payload fires and attempts document.cookie #}
+  <div>{{ comment.body | safe }}</div>
+</li>

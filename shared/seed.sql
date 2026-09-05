@@ -49,7 +49,8 @@ INSERT INTO tasks (id, owner_id, title, description, status, priority, is_privat
 (3, 2, 'Write onboarding docs',     'Cover local setup and env vars.',              'open',        'medium', 0, NULL),
 (4, 2, 'Refactor task list view',   'Extract TaskCard into its own component.',     'open',        'low',    0, NULL),
 (5, 1, 'Rotate API tokens',         'Expire all personal_tokens older than 90d.',   'open',        'high',   1, 'Current prod token: tok_alice_8f3kQpZ2'),
-(6, 3, 'Research htmx pagination',  'Evaluate hx-boost vs manual hx-get paging.',  'open',        'medium', 0, NULL);
+(6, 3, 'Research htmx pagination',  'Evaluate hx-boost vs manual hx-get paging.',  'open',        'medium', 0, NULL),
+(7, 1, 'User access review',        'Audit active sessions and token usage.',        'open',        'high',   0, 'Found 3 stale tokens not rotated since Q1.');
 
 -- ── Comments ──────────────────────────────────────────────────────────────────
 
