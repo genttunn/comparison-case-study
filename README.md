@@ -57,18 +57,33 @@ Both apps share a single CSS file and are seeded from the same SQL file on every
 
 ## Running the apps
 
-Both apps wipe and reseed their database from `shared/seed.sql` on every start.
+Both apps wipe and reseed their database from shared/seed.sql on every start.
+
+    **macOS note:** Homebrew's Python is "externally managed" — `pip install` fails
+    unless you use a virtual environment. Each backend below creates one with
+    `python3 -m venv venv` and activates it with `source venv/bin/activate`.
+    Re-activate the venv in any new terminal before running the app. Use `python3`
+    and `pip3` (plain `python`/`pip` may not exist on macOS).
 
 ### SPA
 
+#### Terminal 1 — backend
 ```bash
-# Terminal 1 — backend
 cd spa/backend
-pip install -r requirements.txt
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python3 app.py
+
+OR
+
+cd spa/backend
 python app.py
 # Runs on http://localhost:5001
+```
 
-# Terminal 2 — frontend
+#### Terminal 2 — frontend
+```bash
 cd spa/frontend
 npm install
 npm run dev
@@ -76,14 +91,18 @@ npm run dev
 ```
 
 ### HDA
-
 ```bash
 cd hda/backend
-pip install -r requirements.txt
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python3 app.py
+
+OR
+cd hda/backend
 python app.py
 # Runs on http://localhost:5002
 ```
-
 ### Demo credentials
 
 | Username | Password | Role     |
