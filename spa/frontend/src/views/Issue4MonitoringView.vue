@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-content">
     <h2 class="page-title">Issue 4: Monitoring &amp; Detection</h2>
     <p class="page-subtitle">What can the server actually see when the client tampers, scrapes, or computes?</p>
 

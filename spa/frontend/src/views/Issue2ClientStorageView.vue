@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-content">
     <h2 class="page-title">Issue 2: Client-Side Storage</h2>
     <p class="page-subtitle">Sensitive data exposure via localStorage JWT storage</p>
 

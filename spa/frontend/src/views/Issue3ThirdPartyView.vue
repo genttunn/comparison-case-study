@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-content">
     <h2 class="page-title">Issue 3: Third-Party Dependencies</h2>
     <p class="page-subtitle">Supply chain attack surface — package inventory and blast radius per layer</p>
 

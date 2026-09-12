@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="display:flex;flex-direction:column;height:100vh;overflow:hidden">
     <template v-if="!isLoginRoute">
       <header class="topbar">
         <span class="topbar-title">Task Tracker &mdash; <span>SPA</span></span>

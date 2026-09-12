@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-content">
     <h2 class="page-title">Issue 1: XSS</h2>
     <p class="page-subtitle">Stored Cross-Site Scripting via unsanitized comment rendering</p>
 

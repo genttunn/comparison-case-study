@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-content">
     <h2 class="page-title">Issue 5: Business Logic Exposure</h2>
     <p class="page-subtitle">Client-side business logic and proprietary information exposure — placeholder (spec_06)</p>
   </div>

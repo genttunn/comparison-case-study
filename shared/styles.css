@@ -167,6 +167,13 @@ body {
     gap: 20px;
 }
 
+.view-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
 .page-title {
     font-size: 18px;
     font-weight: 600;

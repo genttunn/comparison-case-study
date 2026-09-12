@@ -21,3 +21,33 @@ Everything looks good. All five files are updated:
 3. hda/backend/app.py - Activity log, GET /logs (HTML fragment), POST /issue-4-monitoring/add-task (server-side computation + bug_warning log), log calls on login/issue routes/comments, expanded issue_4 route
 4. spa/frontend/src/views/Issue4MonitoringView.vue - Full page with attacker console (Read localStorage, Tamper DOM, Scrape), server log panel, add-task form with client-side off-by-one bug
 5. hda/backend/templates/issue_4_monitoring.html - Same layout, htmx-driven log refresh, htmx form for add-task, server-side off-by-one bug with bug_warning logged
+
+User:
+Add clearly `Part 1 & 2: Client side tampering monitoring` to the first cards.
+
+User:
+Actually for HDA, change `Scrape all tasks` to `Scrape all pages` that's more appropriate. And make sure the log logs the page name `issue-{number}-...` not `task`
+
+User:
+Fix for me a CSS styling bug on SPA side. Check the CSS of the live instances. The cards in the SPA have no distance from each other, and the page cannot be scrolled. Furthermore the side menu on the left in SPA doesn't extend all the way down like HDA when zoomed out.
+
+Claude:
+These are global SPA layout issues, not specific to Issue 4. Let me check the shared CSS and the SPA's App.vue.
+
+The CSS has gap: 20px on .main, so the cards should have spacing. The problem is likely that the SPA wraps the <RouterView> output in a <div> (from the Vue component's <template><div>...</div></template>), and that wrapper div doesn't inherit the gap. The .main flex container sees one child (the wrapper div), so gap has no effect. The cards inside the wrapper are not direct children of .main.
+
+Also overflow: hidden on .layout combined with the SPA's Vue wrapper could prevent scrolling if the .main scroll container isn't sizing correctly.
+
+Confirmed. The <RouterView /> renders each view component inside its own <div> wrapper (the <template><div>...</div></template> root of each view). So .main has one flex child (that div), and gap: 20px does nothing. The cards inside that div have no spacing.
+
+Three fixes needed:
+
+1. Card spacing: make the view wrapper divs inherit the flex column + gap
+2. Scrolling: the wrapper div needs to allow .main's overflow-y: auto to work
+3. Sidebar height: the sidebar needs min-height to extend fully when content is short
+
+Done. Three fixes applied:
+
+1. Card spacing: Added .view-content class (flex column + gap 20px) to all 5 SPA view root divs, so cards inside the Vue wrapper get proper spacing.
+2. Scrolling: The flex chain from body through #app through the App.vue root div is now unbroken, so .main's overflow-y: auto works correctly.
+3. Sidebar height: The same flex chain fix ensures .layout fills the remaining viewport height, making the sidebar stretch all the way down.
