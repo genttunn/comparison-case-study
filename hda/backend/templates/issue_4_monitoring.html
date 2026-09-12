@@ -2,5 +2,142 @@
 {% set active = "issue-4" %}
 {% block content %}
 <h2 class="page-title">Issue 4: Monitoring &amp; Detection</h2>
-<p class="page-subtitle">Client-side change and data access observability — placeholder (spec_05)</p>
+<p class="page-subtitle">What can the server actually see when the client tampers, scrapes, or computes?</p>
+
+<!-- Task card (Parts 1 & 2 need a visible task to tamper) -->
+{% if task %}
+<div class="card">
+  <h4 style="margin-bottom:12px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted)">Part 1 &amp; 2: Client-side tampering monitoring</h4>
+  <h3 id="task-title" style="margin-bottom:10px">{{ task.title }}</h3>
+  <div style="display:flex;gap:12px;margin-bottom:12px;font-size:12px;color:var(--text-muted)">
+    <span>Status: <strong>{{ task.status }}</strong></span>
+    <span>Priority: <strong>{{ task.priority }}</strong></span>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <p style="font-size:13px">{{ task.description }}</p>
+  </div>
+</div>
+{% endif %}
+
+<!-- Part 1: Tampering -->
+<div class="attacker-panel">
+  <h3>Attacker Console</h3>
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px">
+    These buttons simulate a script already running on this page. They act entirely in the browser.
+  </p>
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <button class="btn-secondary" onclick="
+      var result = 'localStorage contents:\n';
+      result += '  token:    ' + (localStorage.getItem('token') || '(empty)') + '\n';
+      result += '  username: ' + (localStorage.getItem('username') || '(empty)');
+      document.getElementById('attacker-output').textContent = result;
+      document.getElementById('attacker-output').style.display = 'block';
+    ">Read localStorage</button>
+    <button class="btn-secondary" onclick="
+      var el = document.getElementById('task-title');
+      if (el) el.textContent = 'TAMPERED VALUE';
+      document.getElementById('attacker-output').textContent = 'DOM tampered: task title overwritten to &quot;TAMPERED VALUE&quot;';
+      document.getElementById('attacker-output').style.display = 'block';
+    ">Tamper DOM value</button>
+    <button class="btn-secondary" onclick="
+      var out = document.getElementById('attacker-output');
+      out.textContent = 'Scraping...';
+      out.style.display = 'block';
+      var routes = ['/issue-1-xss', '/issue-2-client-storage', '/issue-3-third-party', '/issue-4-monitoring', '/issue-5-business-logic'];
+      var done = 0;
+      var results = [];
+      routes.forEach(function(r) {
+        fetch(r).then(function(res) {
+          done++;
+          results.push(r + ' -> ' + res.status);
+          if (done === routes.length) {
+            out.textContent = 'Scraped ' + done + ' pages:\n' + results.join('\n');
+          }
+        });
+      });
+    ">Scrape all pages</button>
+  </div>
+  <pre id="attacker-output" style="display:none;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:10px;font-size:12px;overflow-x:auto;white-space:pre-wrap;max-height:300px;overflow-y:auto"></pre>
+</div>
+
+<!-- Server log panel (shared across all parts) -->
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <h3>Server Log</h3>
+    <button class="btn-secondary"
+            hx-get="/logs"
+            hx-target="#log-body"
+            hx-swap="innerHTML">Refresh</button>
+  </div>
+  <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:12px">
+      <thead>
+        <tr style="border-bottom:2px solid var(--border);text-align:left">
+          <th style="padding:6px 8px">Time</th>
+          <th style="padding:6px 8px">Event</th>
+          <th style="padding:6px 8px">User</th>
+          <th style="padding:6px 8px">Detail</th>
+        </tr>
+      </thead>
+      <tbody id="log-body">
+        <tr><td colspan="4" style="padding:8px;font-size:12px;color:var(--text-muted)">Click Refresh to load entries.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Notes for Parts 1 & 2 -->
+<div class="repro-block">
+  <h3 style="margin-bottom:8px">What the server sees</h3>
+  <p style="line-height:1.7;font-size:13px">
+    <strong>Tampering:</strong> Read localStorage and Tamper DOM value run entirely in the browser.
+    Refresh the log after clicking either one. Nothing new appears, because neither action sent a request.
+    This is a browser-level limit, not something either architecture fixes. No difference between SPA and HDA.
+  </p>
+  <p style="margin-top:10px;line-height:1.7;font-size:13px">
+    <strong>Scraping:</strong> Scrape all pages fetches every page one by one, using normal routes.
+    Refresh the log after clicking it. The entries look identical to a user clicking through pages by hand.
+    Neither app checks for unusual request patterns. No difference between SPA and HDA.
+  </p>
+</div>
+
+<!-- Part 3: State logic location -->
+<div class="card">
+  <h4 style="margin-bottom:12px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted)">Part 3: Where does the computation happen?</h4>
+  <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px">
+    Add a task using the form below. Both apps compute "days since creation" with the same formula.
+    This app (HDA) computes it on the server. The server log will show both the task creation and
+    a warning about the buggy computation result.
+  </p>
+  <form hx-post="/issue-4-monitoring/add-task"
+        hx-target="#part3-result"
+        hx-swap="innerHTML"
+        style="display:flex;gap:8px;align-items:flex-end;margin-bottom:14px">
+    <div class="form-group" style="flex:1;margin-bottom:0">
+      <label for="task-title-input">Task title</label>
+      <input type="text" id="task-title-input" name="title" placeholder="Enter a title..." />
+    </div>
+    <button type="submit">Add task</button>
+  </form>
+  <div id="part3-result"></div>
+</div>
+
+<div class="repro-block">
+  <h3 style="margin-bottom:8px">Where the bug lives</h3>
+  <p style="line-height:1.7;font-size:13px">
+    <strong>HDA:</strong> the server fetches the task from the database and computes
+    "days since creation" with an off-by-one bug: <code>(now - created_at).days - 1</code>.
+    For a task created today, the result is -1.
+  </p>
+  <p style="margin-top:10px;line-height:1.7;font-size:13px">
+    The server log recorded both the task creation and a <code>bug_warning</code> entry with the
+    faulty value. To find this bug, you check one place: the server. Refresh the log panel above
+    to see the warning.
+  </p>
+  <p style="margin-top:10px;line-height:1.7;font-size:13px;color:var(--text-muted)">
+    This is a debugging observation, not a security issue. It shows that when the HDA keeps all
+    state logic on the server, bugs in derived values are logged and visible in one centralized place.
+  </p>
+</div>
 {% endblock %}

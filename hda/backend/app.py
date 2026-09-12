@@ -1,5 +1,6 @@
 import os
 import sqlite3
+import datetime
 from pathlib import Path
 
 from flask import Flask, g, redirect, render_template, request, session, url_for, send_file, make_response
@@ -22,6 +23,19 @@ app.config["SESSION_TYPE"]     = "filesystem"
 app.config["SESSION_FILE_DIR"] = str(BASE_DIR / "flask_session")
 app.config["SESSION_PERMANENT"] = False
 Session(app)
+
+activity_log = []
+
+
+def add_log(event, username, detail=""):
+    activity_log.append({
+        "time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
+        "event": event,
+        "username": username,
+        "detail": detail,
+    })
+    if len(activity_log) > 200:
+        activity_log.pop(0)
 
 
 def init_db():
@@ -89,6 +103,7 @@ def login():
     session["user_id"]  = user["id"]
     session["username"] = user["username"]
     session["role"]     = user["role"]
+    add_log("login", user["username"])
     return redirect(url_for("issue_1_xss"))
 
 
@@ -112,6 +127,7 @@ def issue_1_xss():
            WHERE c.task_id = 1 ORDER BY c.created_at ASC""",
     ).fetchall()
     show_secret_notes = (session.get("user_id") == task["owner_id"])
+    add_log("page_viewed", session.get("username"), "issue-1-xss")
     return render_template("issue_1_xss.html",
                            username=session.get("username"),
                            task=task,
@@ -143,6 +159,8 @@ def post_comment():
            WHERE c.id = ?""",
         (cur.lastrowid,),
     ).fetchone()
+
+    add_log("comment_posted", session["username"], f"task {task_id}")
 
     return render_template("_comment.html", comment=new_comment)
 
@@ -185,6 +203,7 @@ def issue_2_client_storage():
            WHERE c.task_id = 7 ORDER BY c.created_at ASC""",
     ).fetchall()
     show_secret_notes = (session.get("user_id") == task["owner_id"])
+    add_log("page_viewed", session.get("username"), "issue-2-client-storage")
     return render_template("issue_2_client_storage.html",
                            username=session.get("username"),
                            task=task,
@@ -194,16 +213,77 @@ def issue_2_client_storage():
 
 @app.route("/issue-3-third-party")
 def issue_3_third_party():
+    add_log("page_viewed", session.get("username"), "issue-3-third-party")
     return render_template("issue_3_third_party.html", username=session.get("username"))
 
 
 @app.route("/issue-4-monitoring")
 def issue_4_monitoring():
-    return render_template("issue_4_monitoring.html", username=session.get("username"))
+    db   = get_db()
+    task = db.execute("SELECT * FROM tasks WHERE id = 4").fetchone()
+    add_log("page_viewed", session.get("username"), "issue-4-monitoring")
+    return render_template("issue_4_monitoring.html",
+                           username=session.get("username"),
+                           task=task)
+
+
+@app.route("/logs")
+def get_logs():
+    rows = ""
+    for entry in reversed(activity_log):
+        rows += (
+            f"<tr>"
+            f"<td style='padding:4px 8px;font-size:12px'>{entry['time']}</td>"
+            f"<td style='padding:4px 8px;font-size:12px'>{entry['event']}</td>"
+            f"<td style='padding:4px 8px;font-size:12px'>{entry['username']}</td>"
+            f"<td style='padding:4px 8px;font-size:12px'>{entry['detail']}</td>"
+            f"</tr>"
+        )
+    if not rows:
+        rows = "<tr><td colspan='4' style='padding:8px;font-size:12px;color:var(--text-muted)'>No log entries yet.</td></tr>"
+    return rows
+
+
+@app.route("/issue-4-monitoring/add-task", methods=["POST"])
+def issue_4_add_task():
+    if not session.get("user_id"):
+        return "", 401
+
+    title = request.form.get("title", "").strip()
+    if not title:
+        return "<p style='color:var(--danger-text);font-size:13px'>Title is required.</p>"
+
+    db = get_db()
+    cur = db.execute(
+        "INSERT INTO tasks (owner_id, title) VALUES (?, ?)",
+        (session["user_id"], title),
+    )
+    db.commit()
+
+    new_task = db.execute("SELECT * FROM tasks WHERE id = ?", (cur.lastrowid,)).fetchone()
+    add_log("task_created", session["username"], f"task {new_task['id']}")
+
+    created_at = datetime.datetime.strptime(new_task["created_at"], "%Y-%m-%d %H:%M:%S")
+    now = datetime.datetime.now()
+    # VULN: deliberate off-by-one bug, produces -1 for tasks created today
+    days_since = (now - created_at).days - 1
+
+    if days_since < 0:
+        add_log("bug_warning", session["username"], f"days_since_creation={days_since} for task {new_task['id']}")
+
+    return (
+        f"<div style='margin-top:10px'>"
+        f"<p style='font-size:13px'><strong>Created:</strong> {new_task['title']}</p>"
+        f"<p style='font-size:13px'><strong>created_at:</strong> {new_task['created_at']}</p>"
+        f"<p style='font-size:13px'><strong>Days since creation:</strong> "
+        f"<span style='color:{'var(--danger-text)' if days_since < 0 else 'inherit'};font-weight:600'>{days_since}</span></p>"
+        f"</div>"
+    )
 
 
 @app.route("/issue-5-business-logic")
 def issue_5_business_logic():
+    add_log("page_viewed", session.get("username"), "issue-5-business-logic")
     return render_template("issue_5_business_logic.html", username=session.get("username"))
 
 

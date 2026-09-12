@@ -15,6 +15,20 @@ load_dotenv()
 app = APIFlask(__name__, title="SPA Task Tracker API", version="1.0")
 CORS(app, origins=["http://localhost:5173"])
 
+activity_log = []
+
+
+def add_log(event, username, detail=""):
+    activity_log.append({
+        "time": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
+        "event": event,
+        "username": username,
+        "detail": detail,
+    })
+    if len(activity_log) > 200:
+        activity_log.pop(0)
+
+
 BASE_DIR   = Path(__file__).parent
 DB_PATH    = BASE_DIR / "app.db"
 SEED_PATH  = BASE_DIR / "../../shared/seed.sql"
@@ -69,6 +83,7 @@ def login():
         algorithm="HS256",
     )
 
+    add_log("login", user["username"])
     return jsonify({"token": token, "username": user["username"], "role": user["role"]})
 
 
@@ -100,6 +115,8 @@ def get_task(task_id):
     user          = get_current_user()
     current_user_id = int(user["sub"]) if user else None
     secret_notes  = task["secret_notes"] if current_user_id == task["owner_id"] else None
+
+    add_log("task_fetched", user["username"] if user else "anonymous", f"task {task_id}")
 
     return jsonify({
         "id":           task["id"],
@@ -142,11 +159,48 @@ def post_comment():
         (cur.lastrowid,),
     ).fetchone()
 
+    add_log("comment_posted", user["username"], f"task {task_id}")
+
     return jsonify({
         "id":         new_comment["id"],
         "body":       new_comment["body"],
         "username":   new_comment["username"],
         "created_at": new_comment["created_at"],
+    }), 201
+
+
+@app.get("/api/logs")
+def get_logs():
+    return jsonify(activity_log)
+
+
+@app.post("/api/tasks")
+def create_task():
+    user = get_current_user()
+    if not user:
+        return jsonify({"error": "Unauthorized"}), 401
+
+    data  = request.get_json(force=True) or {}
+    title = data.get("title", "").strip()
+    if not title:
+        return jsonify({"error": "title required"}), 400
+
+    db = get_db()
+    cur = db.execute(
+        "INSERT INTO tasks (owner_id, title) VALUES (?, ?)",
+        (user["sub"], title),
+    )
+    db.commit()
+
+    new_task = db.execute("SELECT * FROM tasks WHERE id = ?", (cur.lastrowid,)).fetchone()
+    add_log("task_created", user["username"], f"task {new_task['id']}")
+
+    return jsonify({
+        "id":         new_task["id"],
+        "title":      new_task["title"],
+        "status":     new_task["status"],
+        "priority":   new_task["priority"],
+        "created_at": new_task["created_at"],
     }), 201
 
 

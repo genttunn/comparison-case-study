@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS tasks (
     status       TEXT NOT NULL DEFAULT 'open' CHECK(status IN ('open', 'in_progress', 'done')),
     priority     TEXT NOT NULL DEFAULT 'medium' CHECK(priority IN ('low', 'medium', 'high')),
     is_private   INTEGER NOT NULL DEFAULT 0 CHECK(is_private IN (0, 1)),
-    secret_notes TEXT
+    secret_notes TEXT,
+    created_at   TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
 CREATE TABLE IF NOT EXISTS comments (
@@ -43,14 +44,14 @@ INSERT INTO users (id, username, password_hash, role, email, personal_token) VAL
 
 -- ── Tasks ─────────────────────────────────────────────────────────────────────
 
-INSERT INTO tasks (id, owner_id, title, description, status, priority, is_private, secret_notes) VALUES
-(1, 1, 'Set up CI pipeline',        'Configure GitHub Actions for lint and test.', 'done',        'high',   0, 'Uses org-level secret DEPLOY_KEY.'),
-(2, 1, 'Security audit Q3',         'Review auth flows and input handling.',        'in_progress', 'high',   1, 'Potential IDOR on /tasks endpoint — do not disclose.'),
-(3, 2, 'Write onboarding docs',     'Cover local setup and env vars.',              'open',        'medium', 0, NULL),
-(4, 2, 'Refactor task list view',   'Extract TaskCard into its own component.',     'open',        'low',    0, NULL),
-(5, 1, 'Rotate API tokens',         'Expire all personal_tokens older than 90d.',   'open',        'high',   1, 'Current prod token: tok_alice_8f3kQpZ2'),
-(6, 3, 'Research htmx pagination',  'Evaluate hx-boost vs manual hx-get paging.',  'open',        'medium', 0, NULL),
-(7, 1, 'User access review',        'Audit active sessions and token usage.',        'open',        'high',   0, 'Found 3 stale tokens not rotated since Q1.');
+INSERT INTO tasks (id, owner_id, title, description, status, priority, is_private, secret_notes, created_at) VALUES
+(1, 1, 'Set up CI pipeline',        'Configure GitHub Actions for lint and test.', 'done',        'high',   0, 'Uses org-level secret DEPLOY_KEY.',                    '2026-07-10 09:00:00'),
+(2, 1, 'Security audit Q3',         'Review auth flows and input handling.',        'in_progress', 'high',   1, 'Potential IDOR on /tasks endpoint — do not disclose.', '2026-07-15 10:00:00'),
+(3, 2, 'Write onboarding docs',     'Cover local setup and env vars.',              'open',        'medium', 0, NULL,                                                    '2026-07-20 14:00:00'),
+(4, 2, 'Refactor task list view',   'Extract TaskCard into its own component.',     'open',        'low',    0, NULL,                                                    '2026-07-25 11:00:00'),
+(5, 1, 'Rotate API tokens',         'Expire all personal_tokens older than 90d.',   'open',        'high',   1, 'Current prod token: tok_alice_8f3kQpZ2',               '2026-08-01 08:00:00'),
+(6, 3, 'Research htmx pagination',  'Evaluate hx-boost vs manual hx-get paging.',  'open',        'medium', 0, NULL,                                                    '2026-08-05 16:00:00'),
+(7, 1, 'User access review',        'Audit active sessions and token usage.',        'open',        'high',   0, 'Found 3 stale tokens not rotated since Q1.',            '2026-08-08 09:30:00');
 
 -- ── Comments ──────────────────────────────────────────────────────────────────
 
