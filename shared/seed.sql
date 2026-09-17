@@ -51,7 +51,8 @@ INSERT INTO tasks (id, owner_id, title, description, status, priority, is_privat
 (4, 2, 'Refactor task list view',   'Extract TaskCard into its own component.',     'open',        'low',    0, NULL,                                                    '2026-07-25 11:00:00'),
 (5, 1, 'Rotate API tokens',         'Expire all personal_tokens older than 90d.',   'open',        'high',   1, 'Current prod token: tok_alice_8f3kQpZ2',               '2026-08-01 08:00:00'),
 (6, 3, 'Research htmx pagination',  'Evaluate hx-boost vs manual hx-get paging.',  'open',        'medium', 0, NULL,                                                    '2026-08-05 16:00:00'),
-(7, 1, 'User access review',        'Audit active sessions and token usage.',        'open',        'high',   0, 'Found 3 stale tokens not rotated since Q1.',            '2026-08-08 09:30:00');
+(7, 1, 'User access review',        'Audit active sessions and token usage.',        'open',        'high',   0, 'Found 3 stale tokens not rotated since Q1.',            '2026-08-08 09:30:00'),
+(8, 1, 'Rotate API keys',           'Quarterly key rotation for all external services.', 'done',        'high',   0, NULL,                                                    '2026-09-01 08:00:00');
 
 -- ── Comments ──────────────────────────────────────────────────────────────────
 

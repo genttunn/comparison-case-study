@@ -204,6 +204,25 @@ def create_task():
     }), 201
 
 
+@app.patch("/api/tasks/<int:task_id>/status")
+def update_task_status(task_id):
+    user = get_current_user()
+    if not user:
+        return jsonify({"error": "Unauthorized"}), 401
+
+    data       = request.get_json(force=True) or {}
+    new_status = data.get("status")
+    if new_status not in ("open", "in_progress", "done"):
+        return jsonify({"error": "invalid status"}), 400
+
+    # No guard here — done->in_progress is intentionally allowed by the server
+    db = get_db()
+    db.execute("UPDATE tasks SET status = ? WHERE id = ?", (new_status, task_id))
+    db.commit()
+    task = db.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
+    return jsonify({"id": task["id"], "status": task["status"]}), 200
+
+
 if __name__ == "__main__":
     init_db()
     app.run(port=5001, debug=True)

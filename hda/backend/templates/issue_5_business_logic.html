@@ -2,5 +2,79 @@
 {% set active = "issue-5" %}
 {% block content %}
 <h2 class="page-title">Issue 5: Business Logic Exposure</h2>
-<p class="page-subtitle">Client-side business logic and proprietary information exposure — placeholder (spec_06)</p>
+<p class="page-subtitle">Client-side code delivery exposes business rules to anyone who can open a browser.</p>
+
+<!-- Task card with status selector -->
+{% if task %}
+<div class="card">
+  <h4 style="margin-bottom:12px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted)">Task: status transition guard</h4>
+  <h3 style="margin-bottom:10px">{{ task.title }}</h3>
+  <div style="display:flex;gap:12px;margin-bottom:16px;font-size:12px;color:var(--text-muted)">
+    <span>Status: <strong>{{ task.status }}</strong></span>
+    <span>Priority: <strong>{{ task.priority }}</strong></span>
+  </div>
+  <form hx-post="/tasks/{{ task.id }}/status"
+        hx-target="#status-result"
+        hx-swap="innerHTML"
+        style="display:flex;gap:8px;align-items:flex-end">
+    <div class="form-group" style="flex:1;margin-bottom:0">
+      <label>Change status</label>
+      <select name="status">
+        <option value="open" {% if task.status == 'open' %}selected{% endif %}>Open</option>
+        <option value="in_progress" {% if task.status == 'in_progress' %}selected{% endif %}>In Progress</option>
+        <option value="done" {% if task.status == 'done' %}selected{% endif %}>Done</option>
+      </select>
+    </div>
+    <button type="submit">Update</button>
+  </form>
+  <div id="status-result" style="margin-top:10px"></div>
+</div>
+{% endif %}
+
+<div class="repro-block">
+  <h3 style="margin-bottom:8px">Where the guard lives (HDA)</h3>
+  <p style="font-size:13px;line-height:1.7">
+    The rule "a done task cannot move to In Progress" is enforced server side in the Flask route handler,
+    before any data is written. The template has no logic at all. An attacker who fetches this page
+    only gets HTML.
+  </p>
+  <p style="margin-top:10px;font-size:13px;line-height:1.7">
+    On SPA, the guard lives in the compiled Vue bundle. Anyone who can fetches that bundle can read it and learn what to probe.
+  </p>
+</div>
+
+<!-- Inspect payload panel -->
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <h3>Inspect payload</h3>
+    <button class="btn-secondary" onclick="fetchPageHtml()">Fetch page HTML</button>
+  </div>
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px">
+    Fetches this page's raw HTML response — what an attacker receives when they request it.
+  </p>
+  <div id="html-output" style="display:none">
+    <pre id="html-pre" style="background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:10px;font-size:11px;overflow-x:auto;white-space:pre-wrap;max-height:400px;overflow-y:auto;line-height:1.6"></pre>
+    <p style="margin-top:10px;font-size:12px;color:var(--text-muted)">
+      The response is HTML only. No business logic, formulas, or guard conditions are present.
+      There is nothing here for an attacker to reverse-engineer.
+    </p>
+  </div>
+</div>
+
+<script>
+function fetchPageHtml() {
+  fetch(window.location.href)
+    .then(function(res) { return res.text(); })
+    .then(function(html) {
+      var pre = document.getElementById('html-pre');
+      pre.textContent = html;
+      document.getElementById('html-output').style.display = 'block';
+    })
+    .catch(function(e) {
+      var pre = document.getElementById('html-pre');
+      pre.textContent = 'Fetch failed: ' + e.message;
+      document.getElementById('html-output').style.display = 'block';
+    });
+}
+</script>
 {% endblock %}

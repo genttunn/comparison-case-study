@@ -283,8 +283,33 @@ def issue_4_add_task():
 
 @app.route("/issue-5-business-logic")
 def issue_5_business_logic():
+    db   = get_db()
+    task = db.execute("SELECT * FROM tasks WHERE id = 8").fetchone()
     add_log("page_viewed", session.get("username"), "issue-5-business-logic")
-    return render_template("issue_5_business_logic.html", username=session.get("username"))
+    return render_template("issue_5_business_logic.html", username=session.get("username"), task=task)
+
+
+@app.route("/tasks/<int:task_id>/status", methods=["POST"])
+def update_task_status(task_id):
+    if not session.get("user_id"):
+        return "", 401
+
+    new_status = request.form.get("status")
+    if new_status not in ("open", "in_progress", "done"):
+        return "<p style='color:var(--danger-text);font-size:13px'>Invalid status.</p>", 400
+
+    db   = get_db()
+    task = db.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
+    if not task:
+        return "<p style='color:var(--danger-text);font-size:13px'>Task not found.</p>", 404
+
+    if task["status"] == "done" and new_status == "in_progress":
+        return "<p style='color:var(--danger-text);font-size:13px'>A completed task cannot be moved back to In Progress.</p>", 400
+
+    db.execute("UPDATE tasks SET status = ? WHERE id = ?", (new_status, task_id))
+    db.commit()
+    task = db.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
+    return render_template("_task_status.html", task=task)
 
 
 if __name__ == "__main__":

@@ -81,4 +81,4 @@ This spec checks three things about what a server can see and log about client-s
 See log_spec_05.md
 
 ## 9. Deviations / Corrections
-(filled after implementation)
+Fixed minor layout bug where SPA Vue cards are not spaced, side menu does not extend to viewport height, and page cannot be scrolled.
