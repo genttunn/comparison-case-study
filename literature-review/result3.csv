@@ -1,0 +1,145 @@
+Number,Title,Score,IsCollection
+14,Artificial Intelligence for Threat Detection in Single SPage Applications a Proactive Security Approach,4.5,0
+18,A survey on web application vulnerabilities and countermeasures,4.5,0
+20,A {Study} on {Written} {Communication} {About} {Client}-{Side} {Web} {Security},4.5,0
+82,Salvaging security for speedy single-page applications,4.5,0
+131,Front end application security: Proposal for a new approach,4.5,0
+135,Improving {Client}-{Side} {Web} {Security},4.5,0
+136,Primer on {Client}-{Side} {Web} {Security},4.5,0
+137,The {Relevance} of {Client}-{Side} {Web} {Security},4.5,0
+12,{WebJail}: least-privilege integration of third-party components in web mashups,3.5,0
+36,Secure file system services for web 2.0 applications,3.5,0
+40,Automated security testing of web widget interactions,3.5,0
+69,{SOMA}: mutual approval for included content in web pages,3.5,0
+70,Privacy-aware identity management for client-side mashup applications,3.5,0
+81,"Optimizing {OAuth} 2.0 {BFF} for {Enhanced} {Security}, {User} {Experience}, and {Developer} {Experience} in the {Enterprise}: {Motivation} and {Strategy}",3.5,0
+88,Web application security: CAS and beyond,3.5,0
+96,"Secure Development Methodology for Full Stack Web Applications: Proof of the Methodology Applied to Vue.js, Spring Boot and MySQL",3.5,0
+103,The Single Page Application architecture when developing secure Web services,3.5,0
+107,A secured distribution of server loads to clients,3.5,0
+109,Monkey-in-the-browser: malware and vulnerabilities in augmented browsing script markets,3.5,0
+141,A novel methodology towards a trusted environment in mashup web applications,3.5,0
+17,"17th International Symposium on Practical Aspects of Declarative Languages, PADL 2015",3,1
+21,"Hybrid {Intelligent} {Systems}: 22nd {International} {Conference} on {Hybrid} {Intelligent} {Systems} ({HIS} 2022), {December} 13–15, 2022",3,1
+22,Proceedings of the {Third} {International} {Conference} on {Information} {Management} and {Machine} {Intelligence}: {ICIMMI} 2021,3,1
+23,"Cyber {Security} {Intelligence} and {Analytics}: {The} 4th {International} {Conference} on {Cyber} {Security} {Intelligence} and {Analytics} ({CSIA} 2022), {Volume} 2",3,1
+25,"Applied {Cryptography} and {Network} {Security}: 19th {International} {Conference}, {ACNS} 2021, {Kamakura}, {Japan}, {June} 21–24, 2021, {Proceedings}, {Part} {I}",3,1
+26,Semantic {Hyper}/{Multimedia} {Adaptation}: {Schemes} and {Applications},3,1
+27,"Cryptology and {Network} {Security}: 9th {International} {Conference}, {CANS} 2010, {Kuala} {Lumpur}, {Malaysia}, {December} 12-14, 2010. {Proceedings}",3,1
+54,"International journal of information security: a bibliometric study, 2007–2023",3,1
+83,Full Stack AngularJS for Java Developers: Build a Full-Featured Web Application from Scratch Using AngularJS with Spring RESTful,3,1
+91,"18th International Conference on Web Information Systems Engineering, WISE 2017",3,1
+93,MODELSWARD 2018 - Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development,3,1
+114,"Full Stack Development with Microsoft Blazor: Building Web, Mobile, and Desktop Applications in.NET 8 and Beyond: Fourth Edition",3,1
+1,Analyzing the vulnerabilities in GWT code and applications,2.5,0
+2,Trust me if you can: how usable is trusted types in practice?,2.5,0
+3,Fine-{Grained} {Data}-{Centric} {Content} {Protection} {Policy} for {Web} {Applications},2.5,0
+4,{ScriptProtect}: {Mitigating} {Unsafe} {Third}-{Party} {JavaScript} {Practices},2.5,0
+6,Database {Traffic} {Interception} for {Graybox} {Detection} of {Stored} and {Context}-sensitive {XSS},2.5,0
+7,Path sensitive static analysis of web applications for remote code execution vulnerability detection,2.5,0
+8,Semantic differential repair for input validation and sanitization,2.5,0
+9,Scanning of real-world web applications for parameter tampering vulnerabilities,2.5,0
+11,Protecting sensitive web content from client-side vulnerabilities with {CRYPTONS},2.5,0
+13,Monitoring {Reactive} {Systems} with {Dynamic} {Channels},2.5,0
+15,Client Side AI Based Intent Verification for Defending Against CSRF Attacks in Modern Web Applications,2.5,0
+16,Enhance Web-Components in Order to Increase Security and Maintainability,2.5,0
+19,VeriFlow: A Framework for the Static Verification of Web Application Access Control via Policy-Graph Consistency,2.5,0
+28,Semantic web {Racer}: {Dynamic} security testing of the web application against race condition in the business layer,2.5,0
+29,Towards {Enabling} {Secure} {Web}-{Based} {Cloud} {Services} using {Client}-{Side} {Encryption},2.5,0
+30,{mXSS} attacks: attacking well-secured web-applications by using {innerHTML} mutations,2.5,0
+31,Talking {About} {My} {Generation}: {Targeted} {DOM}-based {XSS} {Exploit} {Generation} using {Dynamic} {Data} {Flow} {Analysis},2.5,0
+32,Dancer in the dark: synthesizing and evaluating polyglots for blind cross-site scripting,2.5,0
+33,A server- and browser-transparent {CSRF} defense for web 2.0 applications,2.5,0
+34,{GlassTube}: a lightweight approach to web application integrity,2.5,0
+35,Browser protection against cross-site request forgery,2.5,0
+37,Analysis of privacy and security in {HTML5} web storage,2.5,0
+38,Building secure web applications with automatic partitioning,2.5,0
+39,Ripley: automatically securing web 2.0 applications through replicated execution,2.5,0
+42,Securing web content,2.5,0
+43,Automated black-box detection of side-channel vulnerabilities in web applications,2.5,0
+44,{TamperProof}: a server-agnostic defense for parameter tampering attacks on web applications,2.5,0
+45,Dead or alive: {Discovering} server {HTTP} endpoints in both reachable and dead client-side code,2.5,0
+46,"Honey, {I} {Cached} our {Security} {Tokens} {Re}-usage of {Security} {Tokens} in the {Wild}",2.5,0
+47,{SANDDRILLER}: a fully-automated approach for testing language-based {JavaScript} sandboxes,2.5,0
+49,A tale of two headers: a formal analysis of inconsistent click-jacking protection on the web,2.5,0
+51,Hybrid security analysis of web {JavaScript} code via dynamic partial evaluation,2.5,0
+52,Finding client-side business flow tampering vulnerabilities,2.5,0
+53,Static analysis method for detecting cross site scripting vulnerabilities,2.5,0
+55,Careful {Who} {You} {Trust}: {Studying} the {Pitfalls} of {Cross}-{Origin} {Communication},2.5,0
+58,Cross-site scripting ({XSS}) attacks and mitigation: {A} survey,2.5,0
+61,Protected {Web} {Components}: {Hiding} {Sensitive} {Information} in the {Shadows},2.5,0
+62,Flexible access control for javascript,2.5,0
+64,Implementing side-channel attacks on suggest boxes in web applications,2.5,0
+65,{SideAuto}: quantitative information flow for side-channel leakage in web applications,2.5,0
+66,Scriptless attacks: stealing the pie without touching the sill,2.5,0
+67,Assessing the {Impact} of {Script} {Gadgets} on {CSP} at {Scale},2.5,0
+72,Business-layer client-side racer: dynamic security testing of the web application against client-side race condition in the business layer,2.5,0
+73,Sessionlock: securing web sessions against eavesdropping,2.5,0
+74,Twenty-two years since revealing cross-site scripting attacks: {A} systematic mapping and a comprehensive survey,2.5,0
+78,{DexterJS}: robust testing platform for {DOM}-based {XSS} vulnerabilities,2.5,0
+79,{WebIBC}: {Identity} {Based} {Cryptography} for {Client} {Side} {Security} in {Web} {Applications},2.5,0
+80,{ZigZag}: automatically hardening web applications against client-side validation vulnerabilities,2.5,0
+84,WEBAPPAUTH: An Architecture to Protect from Compromised First-Party Web Servers,2.5,0
+85,ReactAppScan: Mining React Application Vulnerabilities via Component Graph,2.5,0
+86,Examining web-based spyware invasion with Stateful behavior monitoring,2.5,0
+87,Gelato: Feedback-driven and Guided Security Analysis of Client-side Web Applications,2.5,0
+89,Information-flow-based access control for web browsers,2.5,0
+90,DomXssMicro: A micro Benchmark for evaluating DOM-based cross-site scripting detection,2.5,0
+94,Adopting Trusted Types in ProductionWeb Frameworks to Prevent DOM-Based Cross-Site Scripting: A Case Study,2.5,0
+97,What is DOM XSS and why should you care?,2.5,0
+98,Wasmati: An efficient static vulnerability scanner for WebAssembly,2.5,0
+104,Automatic simplification of obfuscated JavaScript code: A semantics-based approach,2.5,0
+105,Pseudo-randomness inside web browsers,2.5,0
+106,Enhancing JavaScript Malware Detection Through Weighted Behavioral DFAs,2.5,0
+108,Guardia: Specification and enforcement of JavaScript security policies without VM modifications,2.5,0
+110,A survey of detection methods for {XSS} attacks,2.5,0
+111,{NoTamper}: automatic blackbox detection of parameter tampering opportunities in web applications,2.5,0
+115,History-based security for {JavaScript},2.5,0
+116,Dirty {Clicks}: {A} {Study} of the {Usability} and {Security} {Implications} of {Click}-related {Behaviors} on the {Web},2.5,0
+117,{DISTINCT}: {Identity} {Theft} using {In}-{Browser} {Communications} in {Dual}-{Window} {Single} {Sign}-{On},2.5,0
+118,{deDacota}: toward preventing server-side {XSS} via automatic code and data separation,2.5,0
+120,The {DOMino} effect: detecting and exploiting {DOM} clobbering gadgets via concolic execution with symbolic {DOM},2.5,0
+121,{BACScan}: {Automatic} {Black}-{Box} {Detection} of {Broken}-{Access}-{Control} {Vulnerabilities} in {Web} {Applications},2.5,0
+122,{LeakPair}: {Proactive} {Repairing} of {Memory} {Leaks} in {Single} {Page} {Web} {Applications},2.5,0
+123,{WAIT}: {Protecting} the {Integrity} of {Web} {Applications} with {Binary}-{Equivalent} {Transparency},2.5,0
+124,{TrustJS}: {Trusted} {Client}-side {Execution} of {JavaScript},2.5,0
+125,{ProClick}: a framework for testing clickjacking attacks in web applications,2.5,0
+126,Web platform threats: automated detection of web security issues with {WPT},2.5,0
+127,Exploiting input sanitization for regex denial of service,2.5,0
+130,Securing timeout instructions in web applications,2.5,0
+132,Combating phishing and script-based attacks: a novel machine learning framework for improved client-side security,2.5,0
+133,Implementing {Client}-{Side} {Encryption} for {Enforcing} {Data} {Privacy} on the {Web} {Using} {Symmetric} {Cryptography}: {A} {Research} {Paper},2.5,0
+134,Analysis of {Client}-{Side} {Security} for {Long}-{Term} {Time}-{Stamping} {Services},2.5,0
+138,A {Client}-{Side} {Privacy} {Framework} for {Web} {Personalization},2.5,0
+139,A client-side approach for privacy-preserving identity federation,2.5,0
+140,Performance and {Security} {Aspects} of {Client}-{Side} {SSL}/{TLS} {Processing} on {Mobile} {Devices},2.5,0
+142,An {Empirical} {Study} of the {Framework} {Impact} on the {Security} of {JavaScript} {Web} {Applications},2.5,0
+143,Saving the world wide web from vulnerable {JavaScript},2.5,0
+144,Helping or {Hindering}? {How} {Browser} {Extensions} {Undermine} {Security},2.5,0
+60,Enhancing web services compositions with privacy capabilities,2,0
+63,{STACCO}: {Differentially} {Analyzing} {Side}-{Channel} {Traces} for {Detecting} {SSL}/{TLS} {Vulnerabilities} in {Secure} {Enclaves},2,0
+68,Testing and assessing web vulnerability scanners for persistent {SQL} injection attacks,2,0
+76,Systematic {Review} {Analysis} on {SQLIA} {Detection} and {Prevention} {Approaches},2,0
+129,Prevention of {SQL} {Injection} {Attacks} to {Login} {Page} of a {Website} {Application} using {Prepared} {Statement} {Technique},2,0
+5,Rich cloud-based web applications with {CloudBrowser} 2.0,1.5,0
+41,"Developers enjoy hypermedia, but may resist browser-based {OAuth} authorization",1.5,0
+56,Time present and time past: analyzing the evolution of {JavaScript} code in the wild,1.5,0
+57,Security {Analysis} of the {Chinese} {Web}: {How} well is it protected?,1.5,0
+71,Your {Cache} {Has} {Fallen}: {Cache}-{Poisoned} {Denial}-of-{Service} {Attack},1.5,0
+75,{TLS} {Guard} for {TLS} 1.3 zero round-trip time (0-{RTT}) in a distributed environment,1.5,0
+92,Principles of securing RESTful API web services developed with python frameworks,1.5,0
+112,"Developing client-side mashups: experiences, guidelines and the road ahead",1.5,0
+128,The {Matter} of {Captchas}: {An} {Analysis} of a {Brittle} {Security} {Feature} on the {Modern} {Web},1.5,0
+10,Empirical analysis of attack graphs for mitigating critical paths and vulnerabilities,-29.5,0
+24,Resource provision and {QoS} support with added security for client side applications in cloud computing,-29.5,0
+48,"No {Peer}, no {Cry}: {Network} {Application} {Fuzzing} via {Fault} {Injection}",-29.5,0
+50,Automated {Security} {Assessments} of {Amazon} {Web} {Services} {Environments},-29.5,0
+59,Synthesising {Privacy} by {Design} {Knowledge} {Toward} {Explainable} {Internet} of {Things} {Application} {Designing} in {Healthcare},-29.5,0
+77,Visited {Websites} {May} {Reveal} {Users}' {Demographic} {Information} and {Personality},-29.5,0
+95,Enhancing Web Applications Observability through Instrumented Automated Browsers,-29.5,0
+99,A client-side web application for interactive environmental simulation modeling,-29.5,0
+100,A component- and push-based architectural style for ajax applications,-29.5,0
+101,Application Monitoring for bug reproduction in web-based applications,-29.5,0
+102,Return of the JS: Towards a Node.js-Based Software Architecture for Combined CMS/CRM Applications,-29.5,0
+113,Towards understanding modern web traffic,-29.5,0
+119,A longitudinal exploratory study on code smells in server side web applications,-29.5,0

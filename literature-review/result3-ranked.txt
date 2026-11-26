@@ -1,0 +1,479 @@
+RANKED STUDIES
+================================================================================
+
+The Relevance of Client-Side Web Security
+  Score: 5.5 | Article ID: 49271539
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Primer on Client-Side Web Security
+  Score: 5.5 | Article ID: 49271538
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Improving Client-Side Web Security
+  Score: 5.5 | Article ID: 49271537
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A Study on Written Communication About Client-Side Web Security
+  Score: 5.5 | Article ID: 49271527
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A survey on web application vulnerabilities and countermeasures
+  Score: 5.5 | Article ID: 49263720
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Salvaging security for speedy single-page applications
+  Score: 5.5 | Article ID: 49263687
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Artificial Intelligence for Threat Detection in Single-Page Applications: a Proactive Security Approach
+  Score: 5.5 | Article ID: 49259818
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Front end application security: Proposal for a new approach
+  Score: 5.5 | Article ID: 49263721
+  Q1: Yes, Q2: Yes, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Secure Development Methodology for Full Stack Web Applications: Vue.js, Spring Boot and MySQL
+  Score: 4.0 | Article ID: 49265657
+  Q1: Maybe, Q2: Maybe, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+The Single Page Application architecture when developing secure Web services
+  Score: 4.0 | Article ID: 49263702
+  Q1: Maybe, Q2: Maybe, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Optimizing OAuth 2.0 BFF for Enhanced Security, User Experience, and Developer Experience in the Enterprise
+  Score: 4.0 | Article ID: 49262565
+  Q1: Maybe, Q2: Maybe, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Web application security: CAS and beyond
+  Score: 4.0 | Article ID: 49263704
+  Q1: Maybe, Q2: Maybe, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A secured distribution of server loads to clients
+  Score: 4.0 | Article ID: 49263688
+  Q1: Maybe, Q2: Maybe, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A novel methodology towards a trusted environment in mashup web applications
+  Score: 3.5 | Article ID: 49258231
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: Yes, Q6: Maybe
+
+WebJail: least-privilege integration of third-party components in web mashups
+  Score: 3.5 | Article ID: 49258333
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: Yes, Q6: Maybe
+
+Privacy-aware identity management for client-side mashup applications
+  Score: 3.5 | Article ID: 49258385
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: Yes, Q6: Maybe
+
+SOMA: mutual approval for included content in web pages
+  Score: 3.5 | Article ID: 49258396
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: Yes, Q6: Maybe
+
+Secure file system services for web 2.0 applications
+  Score: 3.5 | Article ID: 49258225
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: Yes, Q6: Maybe
+
+Automated security testing of web widget interactions
+  Score: 3.5 | Article ID: 49258233
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: Yes, Q6: Maybe
+
+Monkey-in-the-browser: malware and vulnerabilities in augmented browsing script markets
+  Score: 3.5 | Article ID: 49258436
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: Yes, Q6: Maybe
+
+Twenty-two years since revealing cross-site scripting attacks: A systematic mapping and a comprehensive survey
+  Score: 2.5 | Article ID: 49258431
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Cross-site scripting (XSS) attacks and mitigation: A survey
+  Score: 2.5 | Article ID: 49258327
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A survey of detection methods for XSS attacks
+  Score: 2.5 | Article ID: 49258429
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+What is DOM XSS and why should you care?
+  Score: 2.5 | Article ID: 49265641
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+WAIT: Protecting the Integrity of Web Applications with Binary-Equivalent Transparency
+  Score: 2.5 | Article ID: 49254562
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+LeakPair: Proactive Repairing of Memory Leaks in Single Page Web Applications
+  Score: 2.5 | Article ID: 49254560
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+ReactAppScan: Mining React Application Vulnerabilities via Component Graph
+  Score: 2.5 | Article ID: 49263701
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Adopting Trusted Types in Production Web Frameworks to Prevent DOM-Based Cross-Site Scripting: A Case Study
+  Score: 2.5 | Article ID: 49263737
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Trust me if you can: how usable is trusted types in practice?
+  Score: 2.5 | Article ID: 49258260
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+The DOMino effect: detecting and exploiting DOM clobbering gadgets via concolic execution with symbolic DOM
+  Score: 2.5 | Article ID: 49258269
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Talking About My Generation: Targeted DOM-based XSS Exploit Generation using Dynamic Data Flow Analysis
+  Score: 2.5 | Article ID: 49258199
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+DomXssMicro: A micro Benchmark for evaluating DOM-based cross-site scripting detection
+  Score: 2.5 | Article ID: 49263718
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+DexterJS: robust testing platform for DOM-based XSS vulnerabilities
+  Score: 2.5 | Article ID: 49258438
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+mXSS attacks: attacking well-secured web-applications by using innerHTML mutations
+  Score: 2.5 | Article ID: 49258237
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Dancer in the dark: synthesizing and evaluating polyglots for blind cross-site scripting
+  Score: 2.5 | Article ID: 49258208
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Scriptless attacks: stealing the pie without touching the sill
+  Score: 2.5 | Article ID: 49258363
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Database Traffic Interception for Graybox Detection of Stored and Context-sensitive XSS
+  Score: 2.5 | Article ID: 49258205
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+deDacota: toward preventing server-side XSS via automatic code and data separation
+  Score: 2.5 | Article ID: 49258298
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Static analysis method for detecting cross site scripting vulnerabilities
+  Score: 2.5 | Article ID: 49258287
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Assessing the Impact of Script Gadgets on CSP at Scale
+  Score: 2.5 | Article ID: 49258370
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Helping or Hindering? How Browser Extensions Undermine Security
+  Score: 2.5 | Article ID: 49258207
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+ScriptProtect: Mitigating Unsafe Third-Party JavaScript Practices
+  Score: 2.5 | Article ID: 49258210
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Protected Web Components: Hiding Sensitive Information in the Shadows
+  Score: 2.5 | Article ID: 49258348
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Fine-Grained Data-Centric Content Protection Policy for Web Applications
+  Score: 2.5 | Article ID: 49258257
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Protecting sensitive web content from client-side vulnerabilities with CRYPTONS
+  Score: 2.5 | Article ID: 49258330
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+BACScan: Automatic Black-Box Detection of Broken-Access-Control Vulnerabilities in Web Applications
+  Score: 2.5 | Article ID: 49258256
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+VeriFlow: A Framework for the Static Verification of Web Application Access Control via Policy-Graph Consistency
+  Score: 2.5 | Article ID: 49263722
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Client Side AI Based Intent Verification for Defending Against CSRF Attacks in Modern Web Applications
+  Score: 2.5 | Article ID: 49259822
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Browser protection against cross-site request forgery
+  Score: 2.5 | Article ID: 49258226
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A server- and browser-transparent CSRF defense for web 2.0 applications
+  Score: 2.5 | Article ID: 49258219
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Honey, I Cached our Security Tokens: Re-usage of Security Tokens in the Wild
+  Score: 2.5 | Article ID: 49258266
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Careful Who You Trust: Studying the Pitfalls of Cross-Origin Communication
+  Score: 2.5 | Article ID: 49258312
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+DISTINCT: Identity Theft using In-Browser Communications in Dual-Window Single Sign-On
+  Score: 2.5 | Article ID: 49258314
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+ZigZag: automatically hardening web applications against client-side validation vulnerabilities
+  Score: 2.5 | Article ID: 49258444
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+NoTamper: automatic blackbox detection of parameter tampering opportunities in web applications
+  Score: 2.5 | Article ID: 49258345
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+TamperProof: a server-agnostic defense for parameter tampering attacks on web applications
+  Score: 2.5 | Article ID: 49258249
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Scanning of real-world web applications for parameter tampering vulnerabilities
+  Score: 2.5 | Article ID: 49258292
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Finding client-side business flow tampering vulnerabilities
+  Score: 2.5 | Article ID: 49258279
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+ProClick: a framework for testing clickjacking attacks in web applications
+  Score: 2.5 | Article ID: 49258244
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A tale of two headers: a formal analysis of inconsistent click-jacking protection on the web
+  Score: 2.5 | Article ID: 49258278
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Dirty Clicks: A Study of the Usability and Security Implications of Click-related Behaviors on the Web
+  Score: 2.5 | Article ID: 49258341
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+SideAuto: quantitative information flow for side-channel leakage in web applications
+  Score: 2.5 | Article ID: 49258365
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Automated black-box detection of side-channel vulnerabilities in web applications
+  Score: 2.5 | Article ID: 49258250
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Implementing side-channel attacks on suggest boxes in web applications
+  Score: 2.5 | Article ID: 49258374
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Business-layer client-side racer: dynamic security testing of the web application against client-side race condition in the business layer
+  Score: 2.5 | Article ID: 49258441
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Semantic web Racer: Dynamic security testing of the web application against race condition in the business layer
+  Score: 2.5 | Article ID: 49258194
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Saving the world wide web from vulnerable JavaScript
+  Score: 2.5 | Article ID: 49258220
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Hybrid security analysis of web JavaScript code via dynamic partial evaluation
+  Score: 2.5 | Article ID: 49258282
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Gelato: Feedback-driven and Guided Security Analysis of Client-side Web Applications
+  Score: 2.5 | Article ID: 49263706
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Guardia: Specification and enforcement of JavaScript security policies without VM modifications
+  Score: 2.5 | Article ID: 49263685
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+History-based security for JavaScript
+  Score: 2.5 | Article ID: 49258349
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Flexible access control for JavaScript
+  Score: 2.5 | Article ID: 49258347
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Information-flow-based access control for web browsers
+  Score: 2.5 | Article ID: 49263710
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Monitoring Reactive Systems with Dynamic Channels
+  Score: 2.5 | Article ID: 49258400
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+TrustJS: Trusted Client-side Execution of JavaScript
+  Score: 2.5 | Article ID: 49258204
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+WEBAPPAUTH: An Architecture to Protect from Compromised First-Party Web Servers
+  Score: 2.5 | Article ID: 49263713
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Web platform threats: automated detection of web security issues with WPT
+  Score: 2.5 | Article ID: 49258252
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+An Empirical Study of the Framework Impact on the Security of JavaScript Web Applications
+  Score: 2.5 | Article ID: 49258229
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Enhance Web-Components in Order to Increase Security and Maintainability
+  Score: 2.5 | Article ID: 49263691
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Analyzing the vulnerabilities in GWT code and applications
+  Score: 2.5 | Article ID: 49263727
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Wasmati: An efficient static vulnerability scanner for WebAssembly
+  Score: 2.5 | Article ID: 49265659
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Dead or alive: Discovering server HTTP endpoints in both reachable and dead client-side code
+  Score: 2.5 | Article ID: 49258261
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Automatic simplification of obfuscated JavaScript code: A semantics-based approach
+  Score: 2.5 | Article ID: 49263700
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Enhancing JavaScript Malware Detection Through Weighted Behavioral DFAs
+  Score: 2.5 | Article ID: 49263689
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Combating phishing and script-based attacks: a novel machine learning framework for improved client-side security
+  Score: 2.5 | Article ID: 49271525
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Examining web-based spyware invasion with Stateful behavior monitoring
+  Score: 2.5 | Article ID: 49263707
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Sessionlock: securing web sessions against eavesdropping
+  Score: 2.5 | Article ID: 49258414
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Analysis of privacy and security in HTML5 web storage
+  Score: 2.5 | Article ID: 49258230
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Towards Enabling Secure Web-Based Cloud Services using Client-Side Encryption
+  Score: 2.5 | Article ID: 49258203
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Implementing Client-Side Encryption for Enforcing Data Privacy on the Web Using Symmetric Cryptography: A Research Paper
+  Score: 2.5 | Article ID: 49271529
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Pseudo-randomness inside web browsers
+  Score: 2.5 | Article ID: 49263693
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+WebIBC: Identity Based Cryptography for Client Side Security in Web Applications
+  Score: 2.5 | Article ID: 49258445
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Securing timeout instructions in web applications
+  Score: 2.5 | Article ID: 49263698
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Securing web content
+  Score: 2.5 | Article ID: 49258399
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+GlassTube: a lightweight approach to web application integrity
+  Score: 2.5 | Article ID: 49258227
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Building secure web applications with automatic partitioning
+  Score: 2.5 | Article ID: 49258235
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Ripley: automatically securing web 2.0 applications through replicated execution
+  Score: 2.5 | Article ID: 49258234
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Semantic differential repair for input validation and sanitization
+  Score: 2.5 | Article ID: 49258290
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Path sensitive static analysis of web applications for remote code execution vulnerability detection
+  Score: 2.5 | Article ID: 49258221
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A Client-Side Privacy Framework for Web Personalization
+  Score: 2.5 | Article ID: 49271540
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+A client-side approach for privacy-preserving identity federation
+  Score: 2.5 | Article ID: 49271542
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Performance and Security Aspects of Client-Side SSL/TLS Processing on Mobile Devices
+  Score: 2.5 | Article ID: 49271543
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Analysis of Client-Side Security for Long-Term Time-Stamping Services
+  Score: 2.5 | Article ID: 49271534
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+Exploiting input sanitization for regex denial of service
+  Score: 2.5 | Article ID: 49258263
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+SANDDRILLER: a fully-automated approach for testing language-based JavaScript sandboxes
+  Score: 2.5 | Article ID: 49258264
+  Q1: No, Q2: No, Q3: Yes, Q4: Yes, Q5: No, Q6: Maybe
+
+STACCO: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves
+  Score: 2.0 | Article ID: 49258346
+  Q1: No, Q2: No, Q3: Maybe, Q4: Yes, Q5: No, Q6: Maybe
+
+Systematic Review Analysis on SQLIA Detection and Prevention Approaches
+  Score: 2.0 | Article ID: 49258432
+  Q1: No, Q2: No, Q3: Maybe, Q4: Yes, Q5: No, Q6: Maybe
+
+Prevention of SQL Injection Attacks to Login Page of a Website Application using Prepared Statement Technique
+  Score: 2.0 | Article ID: 49258308
+  Q1: No, Q2: No, Q3: Maybe, Q4: Yes, Q5: No, Q6: Maybe
+
+Testing and assessing web vulnerability scanners for persistent SQL injection attacks
+  Score: 2.0 | Article ID: 49258378
+  Q1: No, Q2: No, Q3: Maybe, Q4: Yes, Q5: No, Q6: Maybe
+
+Enhancing web services compositions with privacy capabilities
+  Score: 2.0 | Article ID: 49258342
+  Q1: No, Q2: No, Q3: No, Q4: Maybe, Q5: Yes, Q6: Maybe
+
+TLS Guard for TLS 1.3 zero round-trip time (0-RTT) in a distributed environment
+  Score: 1.5 | Article ID: 49258428
+  Q1: No, Q2: No, Q3: No, Q4: Yes, Q5: No, Q6: Maybe
+
+Security Analysis of the Chinese Web: How well is it protected?
+  Score: 1.5 | Article ID: 49258320
+  Q1: No, Q2: No, Q3: No, Q4: Yes, Q5: No, Q6: Maybe
+
+The Matter of Captchas: An Analysis of a Brittle Security Feature on the Modern Web
+  Score: 1.5 | Article ID: 49258307
+  Q1: No, Q2: No, Q3: No, Q4: Yes, Q5: No, Q6: Maybe
+
+Your Cache Has Fallen: Cache-Poisoned Denial-of-Service Attack
+  Score: 1.5 | Article ID: 49258392
+  Q1: No, Q2: No, Q3: No, Q4: Yes, Q5: No, Q6: Maybe
+
+Time present and time past: analyzing the evolution of JavaScript code in the wild
+  Score: 1.5 | Article ID: 49258316
+  Q1: No, Q2: No, Q3: No, Q4: Yes, Q5: No, Q6: Maybe
+
+Developers enjoy hypermedia, but may resist browser-based OAuth authorization
+  Score: 1.5 | Article ID: 49258240
+  Q1: No, Q2: No, Q3: No, Q4: No, Q5: Yes, Q6: Maybe
+
+Developing client-side mashups: experiences, guidelines and the road ahead
+  Score: 1.5 | Article ID: 49258394
+  Q1: No, Q2: No, Q3: No, Q4: No, Q5: Yes, Q6: Maybe
+
+Principles of securing RESTful API web services developed with python frameworks
+  Score: 1.5 | Article ID: 49263723
+  Q1: No, Q2: No, Q3: No, Q4: Yes, Q5: No, Q6: Maybe
+
+Rich cloud-based web applications with CloudBrowser 2.0
+  Score: 1.5 | Article ID: 49258291
+  Q1: No, Q2: No, Q3: No, Q4: Yes, Q5: No, Q6: Maybe
+

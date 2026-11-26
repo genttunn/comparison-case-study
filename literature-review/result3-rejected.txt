@@ -1,0 +1,55 @@
+REJECTED STUDIES
+================================================================================
+
+A client-side web application for interactive environmental simulation modeling
+  Score: -6.0 | Article ID: 49265665
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Towards understanding modern web traffic
+  Score: -6.0 | Article ID: 49258367
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Return of the JS: Towards a Node.js-Based Software Architecture for Combined CMS/CRM Applications
+  Score: -6.0 | Article ID: 49265693
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Application Monitoring for bug reproduction in web-based applications
+  Score: -6.0 | Article ID: 49265680
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+A component- and push-based architectural style for ajax applications
+  Score: -6.0 | Article ID: 49265672
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Enhancing Web Applications Observability through Instrumented Automated Browsers
+  Score: -6.0 | Article ID: 49265634
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Synthesising Privacy by Design Knowledge Toward Explainable Internet of Things Application Designing in Healthcare
+  Score: -6.0 | Article ID: 49258324
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+A longitudinal exploratory study on code smells in server side web applications
+  Score: -6.0 | Article ID: 49258267
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Visited Websites May Reveal Users' Demographic Information and Personality
+  Score: -6.0 | Article ID: 49258440
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Empirical analysis of attack graphs for mitigating critical paths and vulnerabilities
+  Score: -6.0 | Article ID: 49258306
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Resource provision and QoS support with added security for client side applications in cloud computing
+  Score: -6.0 | Article ID: 49271536
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+No Peer, no Cry: Network Application Fuzzing via Fault Injection
+  Score: -6.0 | Article ID: 49258273
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
+Automated Security Assessments of Amazon Web Services Environments
+  Score: -6.0 | Article ID: 49258275
+  Q1: Reject, Q2: Reject, Q3: Reject, Q4: Reject, Q5: Reject, Q6: Maybe
+
