@@ -1,0 +1,145 @@
+Rank,Title,First author,Run 1,Run 2,Run 3,Outcome
+1,Artificial Intelligence for Threat Detection in Single Page Applications a Proactive Security Approach,Bobba and Rao Katta,3.5,5,4.5,core
+2,A Study on Written Communication About Client-Side Web Security,Rauti et al.,3.5,5,4.5,not retrievable
+3,Front end application security: Proposal for a new approach,Ribeiro et al.,3,5,4.5,core
+4,Improving Client-Side Web Security,De Ryck et al.,3.5,5,4.5,same volume
+5,Primer on Client-Side Web Security,De Ryck et al.,3.5,5,4.5,core
+6,The Relevance of Client-Side Web Security,De Ryck et al.,3.5,5,4.5,same volume
+7,Salvaging security for speedy single-page applications,Archer,3.5,4,4.5,not retrievable
+8,A survey on web application vulnerabilities and countermeasures,Atashzar et al.,2,2,4.5,core
+9,Privacy-aware identity management for client-side mashup applications,Zarandioon et al.,3.5,5.5,3.5,not selected
+10,A novel methodology towards a trusted environment in mashup web applications,Patel et al.,3.5,5,3.5,not selected
+11,The Single Page Application architecture when developing secure Web services,Kornienko et al.,3.5,4,3.5,supplementary
+12,WebJail: least-privilege integration of third-party components in web mashups,Van Acker et al.,3.5,4,3.5,not selected
+13,Automated security testing of web widget interactions,Bezemer et al.,3,3.5,3.5,not selected
+14,Monkey-in-the-browser: malware and vulnerabilities in augmented browsing script markets,Van Acker et al.,2.5,3.5,3.5,not selected
+15,"Optimizing OAuth 2.0 BFF for Enhanced Security, User Experience, and Developer Experience in the Enterprise: Motivation and Strategy",Duncan,2.5,3.5,3.5,not selected
+16,"Secure Development Methodology for Full Stack Web Applications: Proof of the Methodology Applied to Vue.js, Spring Boot and MySQL",Rey Rodriguez et al.,1.5,2.5,3.5,not selected
+17,Secure file system services for web 2.0 applications,Hsu and Chen,2.5,2,3.5,not selected
+18,Web application security: CAS and beyond,Chavan,1,2,3.5,not selected
+19,SOMA: mutual approval for included content in web pages,Oda et al.,2.5,1,3.5,not selected
+20,A secured distribution of server loads to clients,Lugo-Cordero and Guha,-5.5,-11.5,3.5,not selected
+21,"17th International Symposium on Practical Aspects of Declarative Languages, PADL 2015",,0.5,3.5,3,collection
+22,"18th International Conference on Web Information Systems Engineering, WISE 2017",,0.5,3,3,collection
+23,"Applied Cryptography and Network Security: 19th International Conference, ACNS 2021, Kamakura, Japan, June 21–24, 2021, Proceedings, Part I",,0.5,3,3,collection
+24,"Cryptology and Network Security: 9th International Conference, CANS 2010, Kuala Lumpur, Malaysia, December 12-14, 2010. Proceedings",,0.5,3,3,collection
+25,"Cyber Security Intelligence and Analytics: The 4th International Conference on Cyber Security Intelligence and Analytics (CSIA 2022), Volume 2",,0.5,3,3,collection
+26,"Hybrid Intelligent Systems: 22nd International Conference on Hybrid Intelligent Systems (HIS 2022), December 13–15, 2022",,0.5,3,3,collection
+27,MODELSWARD 2018 - Proceedings of the 6th International Conference on Model-Driven Engineering and Software Development,,0.5,3,3,collection
+28,Proceedings of the Third International Conference on Information Management and Machine Intelligence: ICIMMI 2021,,0.5,3,3,collection
+29,Full Stack AngularJS for Java Developers: Build a Full-Featured Web Application from Scratch Using AngularJS with Spring RESTful,Soni,-23.5,-11.5,3,collection
+30,"Full Stack Development with Microsoft Blazor: Building Web, Mobile, and Desktop Applications in.NET 8 and Beyond: Fourth Edition",Himschoot,-23.5,-11.5,3,collection
+31,"International journal of information security: a bibliometric study, 2007–2023",Dwivedi,-5.5,-11.5,3,collection
+32,Semantic Hyper/Multimedia Adaptation: Schemes and Applications,,0.5,-11.5,3,collection
+33,An Empirical Study of the Framework Impact on the Security of JavaScript Web Applications,Peguero et al.,3.5,5.5,2.5,not selected
+34,Implementing Client-Side Encryption for Enforcing Data Privacy on the Web Using Symmetric Cryptography: A Research Paper,David Livingston et al.,3.5,5.5,2.5,not selected
+35,Gelato: Feedback-driven and Guided Security Analysis of Client-side Web Applications,Hassanshahi et al.,3.5,5,2.5,not selected
+36,ReactAppScan: Mining React Application Vulnerabilities via Component Graph,Guo et al.,3,5,2.5,not selected
+37,Towards Enabling Secure Web-Based Cloud Services using Client-Side Encryption,Johns and Dirksen,3.5,5,2.5,not selected
+38,Web platform threats: automated detection of web security issues with WPT,Bernardo et al.,4,5,2.5,not selected
+39,A client-side approach for privacy-preserving identity federation,Canard et al.,3.5,4.5,2.5,not selected
+40,A Client-Side Privacy Framework for Web Personalization,Kolias et al.,3.5,4.5,2.5,not selected
+41,Analysis of privacy and security in HTML5 web storage,West and Pulimood,3.5,4.5,2.5,not selected
+42,Protecting sensitive web content from client-side vulnerabilities with CRYPTONS,Dong et al.,4,4,2.5,not selected
+43,Analysis of Client-Side Security for Long-Term Time-Stamping Services,Meng and Chen,2.5,3.5,2.5,not selected
+44,A server- and browser-transparent CSRF defense for web 2.0 applications,Pelizzi and Sekar,2.5,3.5,2.5,not selected
+45,Browser protection against cross-site request forgery,Maes et al.,2.5,3.5,2.5,not selected
+46,Business-layer client-side racer: dynamic security testing of the web application against client-side race condition in the business layer,Alidoosti et al.,3,3.5,2.5,not selected
+47,Client Side AI Based Intent Verification for Defending Against CSRF Attacks in Modern Web Applications,Savenko and Babii,2.5,3.5,2.5,not selected
+48,Combating phishing and script-based attacks: a novel machine learning framework for improved client-side security,Hong et al.,2,3.5,2.5,not selected
+49,Enhancing JavaScript Malware Detection Through Weighted Behavioral DFAs,Pereira et al.,2.5,3.5,2.5,not selected
+50,Finding client-side business flow tampering vulnerabilities,Kim et al.,3,3.5,2.5,not selected
+51,Guardia: Specification and enforcement of JavaScript security policies without VM modifications,Pupo et al.,2.5,3.5,2.5,not selected
+52,Helping or Hindering? How Browser Extensions Undermine Security,Agarwal,2.5,3.5,2.5,not selected
+53,History-based security for JavaScript,Vitek,2.5,3.5,2.5,not selected
+54,Hybrid security analysis of web JavaScript code via dynamic partial evaluation,Tripp et al.,2.5,3.5,2.5,not selected
+55,Performance and Security Aspects of Client-Side SSL/TLS Processing on Mobile Devices,Großschädl and Kizhvatov,2.5,3.5,2.5,not selected
+56,ScriptProtect: Mitigating Unsafe Third-Party JavaScript Practices,Musch et al.,2.5,3.5,2.5,not selected
+57,WebIBC: Identity Based Cryptography for Client Side Security in Web Applications,Guan et al.,3,3.5,2.5,not selected
+58,Automatic simplification of obfuscated JavaScript code: A semantics-based approach,Lu and Debray,2.5,3,2.5,not selected
+59,Dancer in the dark: synthesizing and evaluating polyglots for blind cross-site scripting,Kirchner et al.,3,3,2.5,not selected
+60,DISTINCT: Identity Theft using In-Browser Communications in Dual-Window Single Sign-On,Jannett et al.,3,3,2.5,not selected
+61,Flexible access control for javascript,Richards et al.,2.5,3,2.5,not selected
+62,Information-flow-based access control for web browsers,Yoshihama et al.,2.5,3,2.5,not selected
+63,Pseudo-randomness inside web browsers,Guan et al.,2.5,3,2.5,not selected
+64,SANDDRILLER: a fully-automated approach for testing language-based JavaScript sandboxes,AlHamdan and Staicu,2.5,3,2.5,not selected
+65,Saving the world wide web from vulnerable JavaScript,Guarnieri et al.,2.5,3,2.5,not selected
+66,TrustJS: Trusted Client-side Execution of JavaScript,Goltzsche et al.,3,3,2.5,not selected
+67,WAIT: Protecting the Integrity of Web Applications with Binary-Equivalent Transparency,Meißner et al.,2.5,3,2.5,not selected
+68,ZigZag: automatically hardening web applications against client-side validation vulnerabilities,Weissbacher et al.,3,3,2.5,not selected
+69,A survey of detection methods for XSS attacks,Sarmah et al.,2.5,2.5,2.5,not selected
+70,A tale of two headers: a formal analysis of inconsistent click-jacking protection on the web,Calzavara et al.,2.5,2.5,2.5,not selected
+71,Automated black-box detection of side-channel vulnerabilities in web applications,Chapman and Evans,2.5,2.5,2.5,not selected
+72,Cross-site scripting (XSS) attacks and mitigation: A survey,Rodríguez et al.,2.5,2.5,2.5,not selected
+73,DexterJS: robust testing platform for DOM-based XSS vulnerabilities,Parameshwaran et al.,2.5,2.5,2.5,not selected
+74,Fine-Grained Data-Centric Content Protection Policy for Web Applications,Wang et al.,2.5,2.5,2.5,not selected
+75,"Honey, I Cached our Security Tokens Re-usage of Security Tokens in the Wild",Trampert et al.,2.5,2.5,2.5,not selected
+76,Implementing side-channel attacks on suggest boxes in web applications,Sharma and Menezes,2.5,2.5,2.5,not selected
+77,mXSS attacks: attacking well-secured web-applications by using innerHTML mutations,Heiderich et al.,2.5,2.5,2.5,not selected
+78,ProClick: a framework for testing clickjacking attacks in web applications,Shahriar et al.,2.5,2.5,2.5,not selected
+79,Protected Web Components: Hiding Sensitive Information in the Shadows,De Ryck et al.,3,2.5,2.5,not selected
+80,Scanning of real-world web applications for parameter tampering vulnerabilities,Fung et al.,2.5,2.5,2.5,not selected
+81,Scriptless attacks: stealing the pie without touching the sill,Heiderich et al.,2.5,2.5,2.5,not selected
+82,Semantic web Racer: Dynamic security testing of the web application against race condition in the business layer,Alidoosti et al.,3,2.5,2.5,not selected
+83,Talking About My Generation: Targeted DOM-based XSS Exploit Generation using Dynamic Data Flow Analysis,Bensalim et al.,2.5,2.5,2.5,not selected
+84,TamperProof: a server-agnostic defense for parameter tampering attacks on web applications,Skrupsky et al.,2.5,2.5,2.5,not selected
+85,The DOMino effect: detecting and exploiting DOM clobbering gadgets via concolic execution with symbolic DOM,Liu et al.,2.5,2.5,2.5,not selected
+86,Twenty-two years since revealing cross-site scripting attacks: A systematic mapping and a comprehensive survey,Hannousse et al.,2.5,2.5,2.5,not selected
+87,Wasmati: An efficient static vulnerability scanner for WebAssembly,Tiago Brito et al.,2,2.5,2.5,not selected
+88,WEBAPPAUTH: An Architecture to Protect from Compromised First-Party Web Servers,Wichmann et al.,2.5,2.5,2.5,not selected
+89,Adopting Trusted Types in ProductionWeb Frameworks to Prevent DOM-Based Cross-Site Scripting: A Case Study,Wang et al.,2.5,2,2.5,not selected
+90,Analyzing the vulnerabilities in GWT code and applications,Larson et al.,2.5,2,2.5,not selected
+91,Assessing the Impact of Script Gadgets on CSP at Scale,Roth et al.,2.5,2,2.5,not selected
+92,BACScan: Automatic Black-Box Detection of Broken-Access-Control Vulnerabilities in Web Applications,Liu et al.,2,2,2.5,not selected
+93,Database Traffic Interception for Graybox Detection of Stored and Context-sensitive XSS,Steinhauser and T?ma,2.5,2,2.5,not selected
+94,Dead or alive: Discovering server HTTP endpoints in both reachable and dead client-side code,Sigalov and Gamayunov,2,2,2.5,not selected
+95,deDacota: toward preventing server-side XSS via automatic code and data separation,Doupé et al.,2,2,2.5,not selected
+96,Dirty Clicks: A Study of the Usability and Security Implications of Click-related Behaviors on the Web,Sanchez-Rola et al.,2.5,2,2.5,not selected
+97,DomXssMicro: A micro Benchmark for evaluating DOM-based cross-site scripting detection,Pan and Mao,2.5,2,2.5,not selected
+98,Enhance Web-Components in Order to Increase Security and Maintainability,Münch and Roosmann,3,2,2.5,not selected
+99,Examining web-based spyware invasion with Stateful behavior monitoring,Wu and Kuo,2.5,2,2.5,not selected
+100,NoTamper: automatic blackbox detection of parameter tampering opportunities in web applications,Bisht et al.,2.5,2,2.5,not selected
+101,Ripley: automatically securing web 2.0 applications through replicated execution,Vikram et al.,1.5,2,2.5,not selected
+102,Semantic differential repair for input validation and sanitization,Alkhalaf et al.,2,2,2.5,not selected
+103,Sessionlock: securing web sessions against eavesdropping,Adida,2.5,2,2.5,not selected
+104,SideAuto: quantitative information flow for side-channel leakage in web applications,Huang and Malacaria,2.5,2,2.5,not selected
+105,Static analysis method for detecting cross site scripting vulnerabilities,Usha et al.,2.5,2,2.5,not selected
+106,Trust me if you can: how usable is trusted types in practice?,Roth et al.,2.5,2,2.5,not selected
+107,VeriFlow: A Framework for the Static Verification of Web Application Access Control via Policy-Graph Consistency,Zhang et al.,2,2,2.5,not selected
+108,What is DOM XSS and why should you care?,Josh Hickling,2.5,2,2.5,not selected
+109,Building secure web applications with automatic partitioning,Chong et al.,1.5,1.5,2.5,not selected
+110,GlassTube: a lightweight approach to web application integrity,Hallgren et al.,2.5,1.5,2.5,not selected
+111,Securing timeout instructions in web applications,Russo and Sabelfeld,2.5,1.5,2.5,not selected
+112,Careful Who You Trust: Studying the Pitfalls of Cross-Origin Communication,Meiser et al.,3,1,2.5,not selected
+113,Securing web content,Koskela et al.,2.5,1,2.5,not selected
+114,Exploiting input sanitization for regex denial of service,Barlas et al.,-4,-11.5,2.5,not selected
+115,LeakPair: Proactive Repairing of Memory Leaks in Single Page Web Applications,Shahoor et al.,-4.5,-11.5,2.5,not selected
+116,Monitoring Reactive Systems with Dynamic Channels,Zanarini and Jaskelioff,-5.5,-11.5,2.5,not selected
+117,Path sensitive static analysis of web applications for remote code execution vulnerability detection,Zheng and Zhang,-3.5,-11.5,2.5,not selected
+118,Enhancing web services compositions with privacy capabilities,Khabou et al.,-4.5,-11.5,2,not selected
+119,Prevention of SQL Injection Attacks to Login Page of a Website Application using Prepared Statement Technique,Castillo et al.,-4,-11.5,2,not selected
+120,STACCO: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves,Xiao et al.,-4,-11.5,2,not selected
+121,Systematic Review Analysis on SQLIA Detection and Prevention Approaches,Aliero et al.,-4,-11.5,2,not selected
+122,Testing and assessing web vulnerability scanners for persistent SQL injection attacks,Khoury et al.,-4,-11.5,2,not selected
+123,"Developing client-side mashups: experiences, guidelines and the road ahead",Salminen et al.,2.5,4,1.5,not selected
+124,"Developers enjoy hypermedia, but may resist browser-based OAuth authorization",Richardson,2.5,3,1.5,not selected
+125,The Matter of Captchas: An Analysis of a Brittle Security Feature on the Modern Web,Ousat et al.,2.5,2.5,1.5,not selected
+126,Your Cache Has Fallen: Cache-Poisoned Denial-of-Service Attack,Nguyen et al.,2.5,2.5,1.5,not selected
+127,Security Analysis of the Chinese Web: How well is it protected?,Chen et al.,1,2,1.5,not selected
+128,Principles of securing RESTful API web services developed with python frameworks,Kornienko et al.,-5,-11.5,1.5,not selected
+129,Rich cloud-based web applications with CloudBrowser 2.0,Pan and Back,-5,-11.5,1.5,not selected
+130,Time present and time past: analyzing the evolution of JavaScript code in the wild,Mitropoulos et al.,-5,-11.5,1.5,not selected
+131,TLS Guard for TLS 1.3 zero round-trip time (0-RTT) in a distributed environment,Abdelhafez et al.,-4,-11.5,1.5,not selected
+132,A client-side web application for interactive environmental simulation modeling,Jeffrey D. Walker and Steven C. Chapra,-23.5,-11.5,-29.5,rejected
+133,A component- and push-based architectural style for ajax applications,Ali Mesbah and Arie van Deursen,-5,-11.5,-29.5,rejected
+134,A longitudinal exploratory study on code smells in server side web applications,Bessghaier et al.,-23.5,-11.5,-29.5,rejected
+135,Application Monitoring for bug reproduction in web-based applications,Di Wang et al.,-5.5,-11.5,-29.5,rejected
+136,Automated Security Assessments of Amazon Web Services Environments,Engström et al.,-5.5,-11.5,-29.5,rejected
+137,Empirical analysis of attack graphs for mitigating critical paths and vulnerabilities,Garg et al.,-5,-11.5,-29.5,rejected
+138,Enhancing Web Applications Observability through Instrumented Automated Browsers,Boni García et al.,-5.5,-11.5,-29.5,rejected
+139,"No Peer, no Cry: Network Application Fuzzing via Fault Injection",Bars et al.,-5.5,-11.5,-29.5,rejected
+140,Resource provision and QoS support with added security for client side applications in cloud computing,Rath,-5,-11.5,-29.5,rejected
+141,Return of the JS: Towards a Node.js-Based Software Architecture for Combined CMS/CRM Applications,Fabian Kaimer and Philipp Brune,-5.5,-11.5,-29.5,rejected
+142,Synthesising Privacy by Design Knowledge Toward Explainable Internet of Things Application Designing in Healthcare,Alkhariji et al.,-5.5,-11.5,-29.5,rejected
+143,Towards understanding modern web traffic,Ihm and Pai,-5.5,-11.5,-29.5,rejected
+144,Visited Websites May Reveal Users' Demographic Information and Personality,Lien et al.,-5,-11.5,-29.5,rejected
